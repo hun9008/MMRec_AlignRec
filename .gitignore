@@ -3,7 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-/data/*
+data/baby/*
+data/clothing
+data/elec
+data/sports
 
 mmrec_env
 
