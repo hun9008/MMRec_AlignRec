@@ -19,8 +19,8 @@ req_training: True
 #embedding_size: 3780
 
 # training settings
-epochs: 1000
-stopping_step: 20
+epochs: 50
+stopping_step: 10000
 train_batch_size: 2048
 learner: adam
 learning_rate: 0.001
