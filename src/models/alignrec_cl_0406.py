@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_PROJECTION_0406(GeneralRecommender):
+class ALIGNREC_CL_0406(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_PROJECTION_0406, self).__init__(config, dataset)
+        super(ALIGNREC_CL_0406, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -335,18 +335,17 @@ class ALIGNREC_PROJECTION_0406(GeneralRecommender):
         else:
             ii_sim_loss = self.sim_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat)
 
-        # L2 Loss 추가
-        item_l2_loss = torch.norm(h_id_i_fusion - h_mm_i_fusion, p=2) ** 2
-        # user_l2_loss = torch.norm(h_id_u_fusion - h_mm_u_fusion, p=2) ** 2
-        l2_loss = item_l2_loss
+        # InfoNCE Loss 사용
+        item_cl_loss = self.InfoNCE(h_id_i_fusion, h_mm_i_fusion, self.tau)
+        cl_loss = item_cl_loss
         # l2_loss = item_l2_loss
 
         # if not_train_ui:
         #     return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         # return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         if not_train_ui:
-            return batch_emb_loss + l2_loss * self.lambda_weight
-        return batch_mf_loss + batch_emb_loss + l2_loss * self.lambda_weight
+            return batch_emb_loss + cl_loss * self.lambda_weight
+        return batch_mf_loss + batch_emb_loss + cl_loss * self.lambda_weight
 
     def full_sort_predict(self, interaction):
         user = interaction[0]

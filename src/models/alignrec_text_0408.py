@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_PROJECTION_0406(GeneralRecommender):
+class ALIGNREC_TEXT_0408(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_PROJECTION_0406, self).__init__(config, dataset)
+        super(ALIGNREC_TEXT_0408, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -79,8 +79,27 @@ class ALIGNREC_PROJECTION_0406(GeneralRecommender):
         self.norm_adj = self.sparse_mx_to_torch_sparse_tensor(self.norm_adj).float().to(self.device)
 
 
+        # if self.v_feat is not None:
+        #     self.mm_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)
+        #     mm_adj = build_sim(self.mm_embedding.weight.detach())
+        #     mm_adj = build_knn_normalized_graph(mm_adj, topk=self.knn_k, is_sparse=self.sparse,
+        #                                             norm_type='sym')
+        #     self.mm_original_adj = mm_adj.cuda()
+
+        # if self.v_feat is not None:
+        #     if self.use_ln:
+        #         self.v_ln = nn.LayerNorm(self.v_feat.shape[1])
+        #     self.mm_trs = nn.Linear(self.v_feat.shape[1], self.embedding_dim)
+
         if self.v_feat is not None:
-            self.mm_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)
+
+            if self.t_feat is not None:
+                print("[DEBUG] textual feature is used")
+                mm_raw_feat = torch.cat([self.v_feat, self.t_feat], dim=1)
+            else:
+                mm_raw_feat = self.v_feat
+
+            self.mm_embedding = nn.Embedding.from_pretrained(mm_raw_feat, freeze=False)
             mm_adj = build_sim(self.mm_embedding.weight.detach())
             mm_adj = build_knn_normalized_graph(mm_adj, topk=self.knn_k, is_sparse=self.sparse,
                                                     norm_type='sym')
@@ -88,8 +107,8 @@ class ALIGNREC_PROJECTION_0406(GeneralRecommender):
 
         if self.v_feat is not None:
             if self.use_ln:
-                self.v_ln = nn.LayerNorm(self.v_feat.shape[1])
-            self.mm_trs = nn.Linear(self.v_feat.shape[1], self.embedding_dim)
+                self.v_ln = nn.LayerNorm(mm_raw_feat.shape[1])
+            self.mm_trs = nn.Linear(mm_raw_feat.shape[1], self.embedding_dim)
 
         self.softmax = nn.Softmax(dim=-1)
 
@@ -327,13 +346,13 @@ class ALIGNREC_PROJECTION_0406(GeneralRecommender):
         # if self.ui_cosine_loss:
         #     batch_mf_loss+=(1 - F.cosine_similarity(u_g_embeddings, pos_i_g_embeddings, dim=-1).mean())*self.ui_cosine_loss_weight
 
-        pos_ii_batch_sim_mat = build_sim(self.v_feat[pos_items])
-        neg_ii_batch_sim_mat = build_sim(self.v_feat[neg_items])
+        # pos_ii_batch_sim_mat = build_sim(self.v_feat[pos_items])
+        # neg_ii_batch_sim_mat = build_sim(self.v_feat[neg_items])
 
-        if self.use_bce:
-            ii_sim_loss = self.sim_sigmoid_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat) + self.sim_sigmoid_loss(side_embeds_items[neg_items], neg_ii_batch_sim_mat)
-        else:
-            ii_sim_loss = self.sim_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat)
+        # if self.use_bce:
+        #     ii_sim_loss = self.sim_sigmoid_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat) + self.sim_sigmoid_loss(side_embeds_items[neg_items], neg_ii_batch_sim_mat)
+        # else:
+        #     ii_sim_loss = self.sim_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat)
 
         # L2 Loss 추가
         item_l2_loss = torch.norm(h_id_i_fusion - h_mm_i_fusion, p=2) ** 2
