@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_TEXT_0408(GeneralRecommender):
+class ALIGNREC_INPUT_0408(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_TEXT_0408, self).__init__(config, dataset)
+        super(ALIGNREC_INPUT_0408, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -55,11 +55,31 @@ class ALIGNREC_TEXT_0408(GeneralRecommender):
             nn.Linear(self.embedding_dim, self.embedding_dim)
         )
 
+        self.W_v = nn.Sequential(
+            nn.Linear(self.v_feat.shape[1], self.embedding_dim),
+            nn.ReLU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+
+        self.W_t = nn.Sequential(
+            nn.Linear(self.t_feat.shape[1], self.embedding_dim),
+            nn.ReLU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+
         for layer in self.W_id_i:
             if isinstance(layer, nn.Linear):
                 nn.init.xavier_uniform_(layer.weight)
         
         for layer in self.W_mm_i:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+
+        for layer in self.W_v:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+        
+        for layer in self.W_t:
             if isinstance(layer, nn.Linear):
                 nn.init.xavier_uniform_(layer.weight)
 
@@ -79,32 +99,8 @@ class ALIGNREC_TEXT_0408(GeneralRecommender):
         self.norm_adj = self.sparse_mx_to_torch_sparse_tensor(self.norm_adj).float().to(self.device)
 
 
-        # if self.v_feat is not None:
-        #     self.mm_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)
-        #     mm_adj = build_sim(self.mm_embedding.weight.detach())
-        #     mm_adj = build_knn_normalized_graph(mm_adj, topk=self.knn_k, is_sparse=self.sparse,
-        #                                             norm_type='sym')
-        #     self.mm_original_adj = mm_adj.cuda()
-
-        # if self.v_feat is not None:
-        #     if self.use_ln:
-        #         self.v_ln = nn.LayerNorm(self.v_feat.shape[1])
-        #     self.mm_trs = nn.Linear(self.v_feat.shape[1], self.embedding_dim)
-
-        # print check v_feat & t_feat
-        print("[DEBUG] v_feat:", self.v_feat)
-        print("[DEBUG] t_feat:", self.t_feat)
-        
-
         if self.v_feat is not None:
-
-            if self.t_feat is not None:
-                print("[DEBUG] textual feature is used")
-                mm_raw_feat = torch.cat([self.v_feat, self.t_feat], dim=1)
-            else:
-                mm_raw_feat = self.v_feat
-
-            self.mm_embedding = nn.Embedding.from_pretrained(mm_raw_feat, freeze=False)
+            self.mm_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)
             mm_adj = build_sim(self.mm_embedding.weight.detach())
             mm_adj = build_knn_normalized_graph(mm_adj, topk=self.knn_k, is_sparse=self.sparse,
                                                     norm_type='sym')
@@ -112,8 +108,8 @@ class ALIGNREC_TEXT_0408(GeneralRecommender):
 
         if self.v_feat is not None:
             if self.use_ln:
-                self.v_ln = nn.LayerNorm(mm_raw_feat.shape[1])
-            self.mm_trs = nn.Linear(mm_raw_feat.shape[1], self.embedding_dim)
+                self.v_ln = nn.LayerNorm(self.v_feat.shape[1])
+            self.mm_trs = nn.Linear(self.v_feat.shape[1], self.embedding_dim)
 
         self.softmax = nn.Softmax(dim=-1)
 
@@ -340,6 +336,9 @@ class ALIGNREC_TEXT_0408(GeneralRecommender):
         h_id_i_fusion = self.W_id_i(side_embeds_items)
         h_mm_i_fusion = self.W_mm_i(content_embeds_items)
 
+        h_v_fusion = self.W_v(self.v_feat)
+        h_t_fusion = self.W_t(self.t_feat)
+
         # h_id_u_fusion = self.W_id_u(side_embeds_users)
         # h_mm_u_fusion = self.W_enc_u(content_embeds_user)
 
@@ -362,15 +361,18 @@ class ALIGNREC_TEXT_0408(GeneralRecommender):
         # L2 Loss 추가
         item_l2_loss = torch.norm(h_id_i_fusion - h_mm_i_fusion, p=2) ** 2
         # user_l2_loss = torch.norm(h_id_u_fusion - h_mm_u_fusion, p=2) ** 2
-        l2_loss = item_l2_loss
+
+        l2_mm = torch.norm(h_mm_i_fusion - h_v_fusion, p=2) ** 2 + torch.norm(h_mm_i_fusion - h_t_fusion, p=2) ** 2
+
+        l2_loss = item_l2_loss + self.lambda_weight * l2_mm
         # l2_loss = item_l2_loss
 
         # if not_train_ui:
         #     return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         # return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         if not_train_ui:
-            return batch_emb_loss + l2_loss * self.lambda_weight
-        return batch_mf_loss + batch_emb_loss + l2_loss * self.lambda_weight
+            return batch_emb_loss + l2_loss * self.sim_weight
+        return batch_mf_loss + batch_emb_loss + l2_loss * self.sim_weight
 
     def full_sort_predict(self, interaction):
         user = interaction[0]
