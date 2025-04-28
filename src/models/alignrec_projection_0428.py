@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_PROJECTION_0406(GeneralRecommender):
+class ALIGNREC_PROJECTION_0428(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_PROJECTION_0406, self).__init__(config, dataset)
+        super(ALIGNREC_PROJECTION_0428, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']

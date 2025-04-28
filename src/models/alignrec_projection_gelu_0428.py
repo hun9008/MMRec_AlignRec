@@ -15,16 +15,16 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_WO_USER_MM(GeneralRecommender):
+class ALIGNREC_PROJECTION_GELU_0428(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_WO_USER_MM, self).__init__(config, dataset)
+        super(ALIGNREC_PROJECTION_GELU_0428, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
         self.embedding_dim = config['embedding_size']
         self.knn_k = config['knn_k']
         self.n_layers = config['n_layers']
-        self.reg_weight = config['reg_weight'] # lambda
+        self.lambda_weight = config['lambda_weight'] # lambda
         self.desc = config['desc']
         self.use_ln=config['use_ln']
         self.sim_weight = config['sim_weight'] # beta
@@ -43,16 +43,31 @@ class ALIGNREC_WO_USER_MM(GeneralRecommender):
         nn.init.xavier_uniform_(self.item_id_embedding.weight)
 
         ### Projection Weight Definition ###
-        self.W_id_i = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
-        self.W_enc_i = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
-        nn.init.xavier_uniform_(self.W_id_i.weight)
-        nn.init.xavier_uniform_(self.W_enc_i.weight)
+        self.W_id_i = nn.Sequential(
+            nn.Linear(self.embedding_dim, self.embedding_dim),
+            nn.GELU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+
+        self.W_mm_i = nn.Sequential(
+            nn.Linear(self.embedding_dim, self.embedding_dim),
+            nn.GELU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+
+        for layer in self.W_id_i:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+        
+        for layer in self.W_mm_i:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
 
         ### Projection Weight Definition ###
-        self.W_id_u = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
-        self.W_enc_u = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
-        nn.init.xavier_uniform_(self.W_id_u.weight)
-        nn.init.xavier_uniform_(self.W_enc_u.weight)
+        # self.W_id_u = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
+        # self.W_enc_u = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
+        # nn.init.xavier_uniform_(self.W_id_u.weight)
+        # nn.init.xavier_uniform_(self.W_enc_u.weight)
 
         # self.mm_adj_name="raw_feats" if config['multimodal_data_dir']=='' else config['multimodal_data_dir'].split('/')[-2]
         dataset_path = os.path.abspath(config['data_path'] + config['dataset'])
@@ -249,7 +264,7 @@ class ALIGNREC_WO_USER_MM(GeneralRecommender):
         maxi = F.logsigmoid(pos_scores - neg_scores)
         mf_loss = -torch.mean(maxi)
 
-        emb_loss = self.reg_weight * regularizer
+        emb_loss = self.lambda_weight * regularizer
         reg_loss = 0.0
         return mf_loss, emb_loss, reg_loss
     
@@ -299,10 +314,10 @@ class ALIGNREC_WO_USER_MM(GeneralRecommender):
         content_embeds_user, content_embeds_items = torch.split(content_embeds, [self.n_users, self.n_items], dim=0)
 
         h_id_i_fusion = self.W_id_i(side_embeds_items)
-        h_mm_i_fusion = self.W_enc_i(content_embeds_items)
+        h_mm_i_fusion = self.W_mm_i(content_embeds_items)
 
-        h_id_u_fusion = self.W_id_u(side_embeds_users)
-        h_mm_u_fusion = self.W_enc_u(content_embeds_user)
+        # h_id_u_fusion = self.W_id_u(side_embeds_users)
+        # h_mm_u_fusion = self.W_enc_u(content_embeds_user)
 
         # CCA Loss
         # cl_loss = self.InfoNCE(side_embeds_items[pos_items], content_embeds_items[pos_items], 0.2) + self.InfoNCE(side_embeds_users[users], content_embeds_user[users], 0.2)
@@ -322,16 +337,16 @@ class ALIGNREC_WO_USER_MM(GeneralRecommender):
 
         # L2 Loss 추가
         item_l2_loss = torch.norm(h_id_i_fusion - h_mm_i_fusion, p=2) ** 2
-        user_l2_loss = torch.norm(h_id_u_fusion - h_mm_u_fusion, p=2) ** 2
-        l2_loss = item_l2_loss + user_l2_loss
+        # user_l2_loss = torch.norm(h_id_u_fusion - h_mm_u_fusion, p=2) ** 2
+        l2_loss = item_l2_loss
         # l2_loss = item_l2_loss
 
         # if not_train_ui:
         #     return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         # return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         if not_train_ui:
-            return batch_emb_loss + l2_loss * self.reg_weight
-        return batch_mf_loss + batch_emb_loss + l2_loss * self.reg_weight
+            return batch_emb_loss + l2_loss * self.lambda_weight
+        return batch_mf_loss + batch_emb_loss + l2_loss * self.lambda_weight
 
     def full_sort_predict(self, interaction):
         user = interaction[0]
