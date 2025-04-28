@@ -15,19 +15,19 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC(GeneralRecommender):
+class ALIGNREC_PROJECTION_GELU_0427(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC, self).__init__(config, dataset)
+        super(ALIGNREC_PROJECTION_GELU_0427, self).__init__(config, dataset)
         self.sparse = True
-        self.cl_loss = config['cl_loss']
+        self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
         self.embedding_dim = config['embedding_size']
         self.knn_k = config['knn_k']
         self.n_layers = config['n_layers']
-        self.reg_weight = config['reg_weight']
+        self.lambda_weight = config['lambda_weight'] # lambda
         self.desc = config['desc']
         self.use_ln=config['use_ln']
-        self.sim_weight = config['sim_weight']
+        self.sim_weight = config['sim_weight'] # beta
         self.ui_cosine_loss_weight = config['ui_cosine_loss_weight']
         self.use_cross_att= False
         self.use_user_history = False
@@ -42,6 +42,33 @@ class ALIGNREC(GeneralRecommender):
         nn.init.xavier_uniform_(self.user_embedding.weight)
         nn.init.xavier_uniform_(self.item_id_embedding.weight)
 
+        ### Projection Weight Definition ###
+        self.W_id_i = nn.Sequential(
+            nn.Linear(self.embedding_dim, self.embedding_dim),
+            nn.GELU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+
+        self.W_mm_i = nn.Sequential(
+            nn.Linear(self.embedding_dim, self.embedding_dim),
+            nn.GELU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+
+        for layer in self.W_id_i:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+        
+        for layer in self.W_mm_i:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+
+        ### Projection Weight Definition ###
+        # self.W_id_u = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
+        # self.W_enc_u = nn.Linear(self.embedding_dim, self.embedding_dim, bias=False)
+        # nn.init.xavier_uniform_(self.W_id_u.weight)
+        # nn.init.xavier_uniform_(self.W_enc_u.weight)
+
         # self.mm_adj_name="raw_feats" if config['multimodal_data_dir']=='' else config['multimodal_data_dir'].split('/')[-2]
         dataset_path = os.path.abspath(config['data_path'] + config['dataset'])
         
@@ -52,17 +79,17 @@ class ALIGNREC(GeneralRecommender):
         self.norm_adj = self.sparse_mx_to_torch_sparse_tensor(self.norm_adj).float().to(self.device)
 
 
-        if self.mm_feat is not None:
-            self.mm_embedding = nn.Embedding.from_pretrained(self.mm_feat, freeze=False)
+        if self.v_feat is not None:
+            self.mm_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)
             mm_adj = build_sim(self.mm_embedding.weight.detach())
             mm_adj = build_knn_normalized_graph(mm_adj, topk=self.knn_k, is_sparse=self.sparse,
                                                     norm_type='sym')
             self.mm_original_adj = mm_adj.cuda()
 
-        if self.mm_feat is not None:
+        if self.v_feat is not None:
             if self.use_ln:
-                self.mm_ln = nn.LayerNorm(self.mm_feat.shape[1])
-            self.mm_trs = nn.Linear(self.mm_feat.shape[1], self.embedding_dim)
+                self.v_ln = nn.LayerNorm(self.v_feat.shape[1])
+            self.mm_trs = nn.Linear(self.v_feat.shape[1], self.embedding_dim)
 
         self.softmax = nn.Softmax(dim=-1)
 
@@ -144,14 +171,14 @@ class ALIGNREC(GeneralRecommender):
         return torch.sparse.FloatTensor(indices, values, shape)
 
     def forward(self, adj, users=None, train=False):
-        if self.mm_feat is not None:
+        if self.v_feat is not None:
             if self.use_ln:
-                mm_feats = self.mm_trs(self.mm_ln(self.mm_embedding.weight))
+                mm_feats = self.mm_trs(self.v_ln(self.mm_embedding.weight))
             else:
                 mm_feats = self.mm_trs(self.mm_embedding.weight)
 
         # Behavior-Guided Purifier
-        mm_item_embeds = torch.multiply(self.item_id_embedding.weight, self.gate_v(mm_feats))
+        mm_item_embeds = torch.multiply(self.item_id_embedding.weight, self.gate_v(mm_feats)) # h_enc^i에 해당
 
         # User-Item View
         item_embeds = self.item_id_embedding.weight
@@ -165,7 +192,20 @@ class ALIGNREC(GeneralRecommender):
             all_embeddings += [ego_embeddings]
         all_embeddings = torch.stack(all_embeddings, dim=1)
         all_embeddings = all_embeddings.mean(dim=1, keepdim=False)
-        content_embeds = all_embeddings
+        content_embeds = all_embeddings # h_id^u, h_id^i 에 해당
+
+        ### LightGCN 학습된 emb을 h_id^u, h_id^i로 분리
+        # h_id_u, h_id_i = torch.split(content_embeds, [self.n_users, self.n_items], dim=0)
+        # h_enc_i = mm_item_embeds
+
+        # h_enc_u = torch.sparse.mm(self.R, h_enc_i)
+
+        ### fusion domain으로 projection
+        # h_id_i_fusion = self.W_id_i(h_id_i)
+        # h_enc_i_fusion = self.W_enc_i(h_enc_i)
+
+        # h_id_u_fusion = self.W_id_u(h_id_u)
+        # h_enc_u_fusion = self.W_enc_u(h_enc_u)
 
         # Item-Item View
         if self.sparse:
@@ -179,6 +219,15 @@ class ALIGNREC(GeneralRecommender):
 
         mm_embeds = torch.cat([mm_user_embeds, mm_item_embeds], dim=0)
 
+
+        # if self.side_emb_div!=0:
+        #     all_embeds = content_embeds + mm_embeds/self.side_emb_div
+        # else: 
+        #     all_embeds = content_embeds + mm_embeds
+        # all_embeddings_users, all_embeddings_items = torch.split(all_embeds, [self.n_users, self.n_items], dim=0)
+
+        # ### h_mm 대신 h_enc 사용
+        # enc_embeds = torch.cat([h_enc_u_fusion, h_enc_i_fusion], dim=0)
 
         if self.side_emb_div!=0:
             all_embeds = content_embeds + mm_embeds/self.side_emb_div
@@ -215,7 +264,7 @@ class ALIGNREC(GeneralRecommender):
         maxi = F.logsigmoid(pos_scores - neg_scores)
         mf_loss = -torch.mean(maxi)
 
-        emb_loss = self.reg_weight * regularizer
+        emb_loss = self.lambda_weight * regularizer
         reg_loss = 0.0
         return mf_loss, emb_loss, reg_loss
     
@@ -229,9 +278,9 @@ class ALIGNREC(GeneralRecommender):
         return torch.mean(cl_loss)
     
     def sim_loss(self, embedding, sim):
-        embedding_sim = torch.mm(embedding, embedding.t())
+        embedding_sim = torch.mm(embedding, embedding.t()) # S_mm = E_mm
         # embedding_sim = build_sim(embedding)
-        sim_loss = self.reg_loss(embedding_sim - sim.detach())
+        sim_loss = self.reg_loss(embedding_sim - sim.detach()) # sim.detach() = sg(e_enc)
         return sim_loss
 
     def sim_sigmoid_loss(self, embedding, sim):
@@ -248,7 +297,7 @@ class ALIGNREC(GeneralRecommender):
         pos_items = interaction[1]
         neg_items = interaction[2]
         if self.use_hist_decoder:
-            ua_embeddings, ia_embeddings, side_embeds, content_embeds, user_hist_seq = self.forward(
+            ua_embeddings, ia_embeddings, side_embeds, content_embeds, user_hist_seq  = self.forward(
                 self.norm_adj,users, train=True)
         else:
             ua_embeddings, ia_embeddings, side_embeds, content_embeds = self.forward(
@@ -263,29 +312,47 @@ class ALIGNREC(GeneralRecommender):
 
         side_embeds_users, side_embeds_items = torch.split(side_embeds, [self.n_users, self.n_items], dim=0)
         content_embeds_user, content_embeds_items = torch.split(content_embeds, [self.n_users, self.n_items], dim=0)
-        cl_loss = self.InfoNCE(side_embeds_items[pos_items], content_embeds_items[pos_items], 0.2) + self.InfoNCE(side_embeds_users[users], content_embeds_user[users], 0.2)
 
-        if self.use_hist_decoder:
-            cl_loss+=self.InfoNCE(user_hist_seq, content_embeds_user[users], 0.2)
-        if self.ui_cosine_loss:
-            batch_mf_loss+=(1 - F.cosine_similarity(u_g_embeddings, pos_i_g_embeddings, dim=-1).mean())*self.ui_cosine_loss_weight
+        h_id_i_fusion = self.W_id_i(side_embeds_items)
+        h_mm_i_fusion = self.W_mm_i(content_embeds_items)
 
-        pos_ii_batch_sim_mat = build_sim(self.mm_feat[pos_items])
-        neg_ii_batch_sim_mat = build_sim(self.mm_feat[neg_items])
+        # h_id_u_fusion = self.W_id_u(side_embeds_users)
+        # h_mm_u_fusion = self.W_enc_u(content_embeds_user)
+
+        # CCA Loss
+        # cl_loss = self.InfoNCE(side_embeds_items[pos_items], content_embeds_items[pos_items], 0.2) + self.InfoNCE(side_embeds_users[users], content_embeds_user[users], 0.2)
+
+        # if self.use_hist_decoder:
+        #     cl_loss+=self.InfoNCE(user_hist_seq, content_embeds_user[users], 0.2)
+        # if self.ui_cosine_loss:
+        #     batch_mf_loss+=(1 - F.cosine_similarity(u_g_embeddings, pos_i_g_embeddings, dim=-1).mean())*self.ui_cosine_loss_weight
+
+        pos_ii_batch_sim_mat = build_sim(self.v_feat[pos_items])
+        neg_ii_batch_sim_mat = build_sim(self.v_feat[neg_items])
 
         if self.use_bce:
             ii_sim_loss = self.sim_sigmoid_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat) + self.sim_sigmoid_loss(side_embeds_items[neg_items], neg_ii_batch_sim_mat)
         else:
             ii_sim_loss = self.sim_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat)
 
+        # L2 Loss 추가
+        item_l2_loss = torch.norm(h_id_i_fusion - h_mm_i_fusion, p=2) ** 2
+        # user_l2_loss = torch.norm(h_id_u_fusion - h_mm_u_fusion, p=2) ** 2
+        l2_loss = item_l2_loss
+        # l2_loss = item_l2_loss
+
+        # if not_train_ui:
+        #     return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
+        # return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         if not_train_ui:
-            return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
-        return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
+            return batch_emb_loss + l2_loss * self.lambda_weight
+        return batch_mf_loss + batch_emb_loss + l2_loss * self.lambda_weight
 
     def full_sort_predict(self, interaction):
         user = interaction[0]
 
-        restore_user_e, restore_item_e = self.forward(self.norm_adj)
+        # restore_user_e, restore_item_e = self.forward(self.norm_adj)
+        restore_user_e, restore_item_e, *_ = self.forward(self.norm_adj) # forward에 맞게 수정
         u_embeddings = restore_user_e[user]
 
         # dot with all item embedding to accelerate
