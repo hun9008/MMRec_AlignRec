@@ -280,6 +280,12 @@ class Trainer(AbstractTrainer):
                     self.best_valid_result = valid_result
                     self.best_test_upon_valid = test_result
 
+                    if saved:  # <-- 저장 플래그가 True일 때만
+                        save_path = os.path.join(self.config['checkpoint_dir'], f'{self.config["model"]}_best.pth')
+                        torch.save(self.model.state_dict(), save_path)
+                        if verbose:
+                            self.logger.info(f"Saved best model to {save_path}")                  
+
                 if stop_flag:
                     stop_output = '+++++Finished training, best eval result in epoch %d' % \
                                   (epoch_idx - self.cur_step * self.eval_step)
