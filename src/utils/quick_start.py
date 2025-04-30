@@ -105,4 +105,3 @@ def quick_start(model, dataset, config_dict, save_model=True, mg=False):
                                                                    hyper_ret[best_test_idx][0],
                                                                    dict2str(hyper_ret[best_test_idx][1]),
                                                                    dict2str(hyper_ret[best_test_idx][2])))
-
