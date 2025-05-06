@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
+class ALIGNREC_INPUT_CL_0504(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_INPUT_CL_0430, self).__init__(config, dataset)
+        super(ALIGNREC_INPUT_CL_0504, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -334,8 +334,8 @@ class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
         side_embeds_users, side_embeds_items = torch.split(side_embeds, [self.n_users, self.n_items], dim=0)
         content_embeds_user, content_embeds_items = torch.split(content_embeds, [self.n_users, self.n_items], dim=0)
 
-        h_id_i_fusion = self.W_id_i(side_embeds_items)
-        h_mm_i_fusion = self.W_mm_i(content_embeds_items)
+        h_id_i_fusion = self.W_id_i(content_embeds_items)
+        h_mm_i_fusion = self.W_mm_i(side_embeds_items)
 
         h_v_fusion = self.W_v(self.v_feat)
         h_t_fusion = self.W_t(self.t_feat)

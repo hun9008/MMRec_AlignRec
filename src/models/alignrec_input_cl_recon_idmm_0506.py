@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
+class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_INPUT_CL_0430, self).__init__(config, dataset)
+        super(ALIGNREC_INPUT_CL_RECON_IDMM_0506, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -28,6 +28,7 @@ class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
         self.desc = config['desc']
         self.use_ln=config['use_ln']
         self.sim_weight = config['sim_weight'] # beta
+        self.recon_weight = config['recon_weight'] # gamma
         self.ui_cosine_loss_weight = config['ui_cosine_loss_weight']
         self.use_cross_att= False
         self.use_user_history = False
@@ -67,6 +68,17 @@ class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
             nn.Linear(self.embedding_dim, self.embedding_dim)
         )
 
+        self.W_id_i_recon = nn.Sequential(
+            nn.Linear(self.embedding_dim, self.embedding_dim),
+            nn.ReLU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+        self.W_mm_i_recon = nn.Sequential(
+            nn.Linear(self.embedding_dim, self.embedding_dim),
+            nn.ReLU(),
+            nn.Linear(self.embedding_dim, self.embedding_dim)
+        )
+
 
         for layer in self.W_id_i:
             if isinstance(layer, nn.Linear):
@@ -81,6 +93,14 @@ class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
                 nn.init.xavier_uniform_(layer.weight)
         
         for layer in self.W_t:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+                
+        for layer in self.W_id_i_recon:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+        
+        for layer in self.W_mm_i_recon:
             if isinstance(layer, nn.Linear):
                 nn.init.xavier_uniform_(layer.weight)
 
@@ -334,8 +354,8 @@ class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
         side_embeds_users, side_embeds_items = torch.split(side_embeds, [self.n_users, self.n_items], dim=0)
         content_embeds_user, content_embeds_items = torch.split(content_embeds, [self.n_users, self.n_items], dim=0)
 
-        h_id_i_fusion = self.W_id_i(side_embeds_items)
-        h_mm_i_fusion = self.W_mm_i(content_embeds_items)
+        h_id_i_fusion = self.W_id_i(content_embeds_items)
+        h_mm_i_fusion = self.W_mm_i(side_embeds_items)
 
         h_v_fusion = self.W_v(self.v_feat)
         h_t_fusion = self.W_t(self.t_feat)
@@ -370,12 +390,17 @@ class ALIGNREC_INPUT_CL_0430(GeneralRecommender):
         cl_loss = itme_cl_loss + self.lambda_weight * cl_mm
         # l2_loss = item_l2_loss
 
+        item_recon = self.W_id_i_recon(h_id_i_fusion)
+        mm_recon = self.W_mm_i_recon(h_mm_i_fusion)
+
+        recon_loss = torch.norm(item_recon - h_id_i_fusion, p=2) ** 2 + torch.norm(mm_recon - h_mm_i_fusion, p=2) ** 2
+
         # if not_train_ui:
         #     return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         # return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         if not_train_ui:
-            return batch_emb_loss + cl_loss * self.sim_weight
-        return batch_mf_loss + batch_emb_loss + cl_loss * self.sim_weight
+            return batch_emb_loss + cl_loss * self.sim_weight + recon_loss * self.recon_weight
+        return batch_mf_loss + batch_emb_loss + cl_loss * self.sim_weight + recon_loss * self.recon_weight
 
     def full_sort_predict(self, interaction):
         user = interaction[0]
