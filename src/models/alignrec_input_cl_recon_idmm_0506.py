@@ -393,7 +393,7 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
         item_recon = self.W_id_i_recon(h_id_i_fusion)
         mm_recon = self.W_mm_i_recon(h_mm_i_fusion)
 
-        recon_loss = torch.norm(item_recon - h_id_i_fusion, p=2) ** 2 + torch.norm(mm_recon - h_mm_i_fusion, p=2) ** 2
+        recon_loss = torch.norm(item_recon - content_embeds, p=2) ** 2 + torch.norm(mm_recon - side_embeds, p=2) ** 2
 
         # if not_train_ui:
         #     return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss

@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
+class ALIGNREC_INPUT_CL_ADD_T_0512(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_INPUT_CL_RECON_IDMM_0506, self).__init__(config, dataset)
+        super(ALIGNREC_INPUT_CL_ADD_T_0512, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -28,7 +28,6 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
         self.desc = config['desc']
         self.use_ln=config['use_ln']
         self.sim_weight = config['sim_weight'] # beta
-        self.recon_weight = config['recon_weight'] # gamma
         self.ui_cosine_loss_weight = config['ui_cosine_loss_weight']
         self.use_cross_att= False
         self.use_user_history = False
@@ -68,12 +67,6 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
             nn.Linear(self.embedding_dim, self.embedding_dim)
         )
 
-        self.W_mm_i_recon = nn.Sequential(
-            nn.Linear(self.embedding_dim, self.embedding_dim),
-            nn.ReLU(),
-            nn.Linear(self.embedding_dim, self.embedding_dim)
-        )
-
 
         for layer in self.W_id_i:
             if isinstance(layer, nn.Linear):
@@ -88,10 +81,6 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
                 nn.init.xavier_uniform_(layer.weight)
         
         for layer in self.W_t:
-            if isinstance(layer, nn.Linear):
-                nn.init.xavier_uniform_(layer.weight)
-        
-        for layer in self.W_mm_i_recon:
             if isinstance(layer, nn.Linear):
                 nn.init.xavier_uniform_(layer.weight)
 
@@ -122,6 +111,29 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
             if self.use_ln:
                 self.mm_ln = nn.LayerNorm(self.mm_feat.shape[1])
             self.mm_trs = nn.Linear(self.mm_feat.shape[1], self.embedding_dim)
+
+        if self.t_feat is not None:
+            self.t_embedding = nn.Embedding.from_pretrained(self.t_feat, freeze=False)  # t_feat만 사용
+            t_adj = build_sim(self.t_embedding.weight.detach())
+            t_adj = build_knn_normalized_graph(t_adj, topk=self.knn_k, is_sparse=self.sparse, norm_type='sym')
+            self.t_original_adj = t_adj.cuda()
+
+        if self.t_feat is not None:
+            if self.use_ln:
+                self.t_ln = nn.LayerNorm(self.t_feat.shape[1])  # t_feat 차원에 맞게
+            self.t_trs = nn.Linear(self.t_feat.shape[1], self.embedding_dim)  # t_feat 차원 -> embedding_dim (64)
+
+        if self.v_feat is not None:
+            self.v_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)  # t_feat만 사용
+            v_adj = build_sim(self.v_embedding.weight.detach())
+            v_adj = build_knn_normalized_graph(v_adj, topk=self.knn_k, is_sparse=self.sparse, norm_type='sym')
+            self.v_original_adj = v_adj.cuda()
+
+        if self.v_feat is not None:
+            if self.use_ln:
+                self.v_ln = nn.LayerNorm(self.v_feat.shape[1])  # t_feat 차원에 맞게
+            self.v_trs = nn.Linear(self.v_feat.shape[1], self.embedding_dim)  # t_feat 차원 -> embedding_dim (64)
+
 
         self.softmax = nn.Softmax(dim=-1)
 
@@ -212,6 +224,22 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
         # Behavior-Guided Purifier
         mm_item_embeds = torch.multiply(self.item_id_embedding.weight, self.gate_v(mm_feats)) # h_enc^i에 해당
 
+        if self.t_feat is not None:
+            if self.use_ln:
+                t_feats = self.t_trs(self.t_ln(self.t_embedding.weight))
+            else:
+                t_feats = self.t_trs(self.t_embedding.weight)
+
+        t_item_embeds = torch.multiply(self.item_id_embedding.weight, self.gate_v(t_feats))
+
+        if self.v_feat is not None:
+            if self.use_ln:
+                v_feats = self.v_trs(self.v_ln(self.v_embedding.weight))
+            else:
+                v_feats = self.v_trs(self.v_embedding.weight)
+
+        v_item_embeds = torch.multiply(self.item_id_embedding.weight, self.gate_v(v_feats))
+
         # User-Item View
         item_embeds = self.item_id_embedding.weight
         user_embeds = self.user_embedding.weight
@@ -251,6 +279,29 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
 
         mm_embeds = torch.cat([mm_user_embeds, mm_item_embeds], dim=0)
 
+        # Item-Item View
+        if self.sparse:
+            for i in range(self.n_layers):
+                t_item_embeds = torch.sparse.mm(self.t_original_adj, t_item_embeds)
+        else:
+            for i in range(self.n_layers):
+                t_item_embeds = torch.mm(self.t_original_adj, t_item_embeds)
+
+        t_user_embeds = torch.sparse.mm(self.R,t_item_embeds)
+
+        t_embeds = torch.cat([t_user_embeds, t_item_embeds], dim=0)
+
+        # Item-Item View
+        if self.sparse:
+            for i in range(self.n_layers):
+                v_item_embeds = torch.sparse.mm(self.v_original_adj, v_item_embeds)
+        else:
+            for i in range(self.n_layers):
+                v_item_embeds = torch.mm(self.v_original_adj, v_item_embeds)
+
+        v_user_embeds = torch.sparse.mm(self.R,v_item_embeds)
+
+        v_embeds = torch.cat([v_user_embeds, v_item_embeds], dim=0)
 
         # if self.side_emb_div!=0:
         #     all_embeds = content_embeds + mm_embeds/self.side_emb_div
@@ -262,9 +313,9 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
         # enc_embeds = torch.cat([h_enc_u_fusion, h_enc_i_fusion], dim=0)
 
         if self.side_emb_div!=0:
-            all_embeds = content_embeds + mm_embeds/self.side_emb_div
+            all_embeds = content_embeds + mm_embeds + t_embeds /self.side_emb_div
         else: 
-            all_embeds = content_embeds + mm_embeds
+            all_embeds = content_embeds + mm_embeds + t_embeds
         all_embeddings_users, all_embeddings_items = torch.split(all_embeds, [self.n_users, self.n_items], dim=0)
 
         if self.use_hist_decoder and train:
@@ -381,16 +432,12 @@ class ALIGNREC_INPUT_CL_RECON_IDMM_0506(GeneralRecommender):
         cl_loss = itme_cl_loss + self.lambda_weight * cl_mm
         # l2_loss = item_l2_loss
 
-        mm_recon = self.W_mm_i_recon(h_mm_i_fusion)
-
-        recon_loss = torch.norm(mm_recon - side_embeds_items, p=2) ** 2
-
         # if not_train_ui:
         #     return batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         # return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss + self.sim_weight * ii_sim_loss
         if not_train_ui:
-            return batch_emb_loss + cl_loss * self.sim_weight + recon_loss * self.recon_weight
-        return batch_mf_loss + batch_emb_loss + cl_loss * self.sim_weight + recon_loss * self.recon_weight
+            return batch_emb_loss + cl_loss * self.sim_weight
+        return batch_mf_loss + batch_emb_loss + cl_loss * self.sim_weight
 
     def full_sort_predict(self, interaction):
         user = interaction[0]
