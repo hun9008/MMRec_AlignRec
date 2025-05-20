@@ -15,9 +15,9 @@ from common.loss import EmbLoss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood, build_knn_normalized_graph
 
 
-class ALIGNREC_INPUT_CL_ANCHOR_MMT_0513(GeneralRecommender):
+class ALIGNREC_INPUT_CL_ANCHOR_TV_MEAN_0520(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_INPUT_CL_ANCHOR_MMT_0513, self).__init__(config, dataset)
+        super(ALIGNREC_INPUT_CL_ANCHOR_TV_MEAN_0520, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -312,10 +312,15 @@ class ALIGNREC_INPUT_CL_ANCHOR_MMT_0513(GeneralRecommender):
         # ### h_mm 대신 h_enc 사용
         # enc_embeds = torch.cat([h_enc_u_fusion, h_enc_i_fusion], dim=0)
 
+        content_norm = F.normalize(content_embeds, dim=-1)
+        t_norm = F.normalize(t_embeds, dim=-1)
+        v_norm = F.normalize(v_embeds, dim=-1)
+
         if self.side_emb_div!=0:
-            all_embeds = content_embeds + mm_embeds + t_embeds /self.side_emb_div
+            all_embeds = (content_norm + t_norm + v_norm) / self.side_emb_div
         else: 
-            all_embeds = content_embeds + mm_embeds + t_embeds
+            all_embeds = (content_norm + t_norm + v_norm) / 3
+
         all_embeddings_users, all_embeddings_items = torch.split(all_embeds, [self.n_users, self.n_items], dim=0)
 
         if self.use_hist_decoder and train:
