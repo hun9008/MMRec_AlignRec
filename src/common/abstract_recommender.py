@@ -81,6 +81,8 @@ class GeneralRecommender(AbstractRecommender):
         self.NEG_ITEM_ID = config['NEG_PREFIX'] + self.ITEM_ID
         self.n_users = dataloader.dataset.get_user_num()
         self.n_items = dataloader.dataset.get_item_num()
+        # self.n_users = dataloader.get_user_num()
+        # self.n_items = dataloader.get_item_num()
 
         # load parameters info
         self.batch_size = config['train_batch_size']

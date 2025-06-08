@@ -135,3 +135,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+data/baby/i_id_mapping.csv
+data/baby/image_feat.npy
+data/baby/text_feat.npy
+data/baby/metadata.json
+data/baby/metadata_baby.json
+data/baby/beit3_128token_add_title_brand_to_text/image_feat.npy

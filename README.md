@@ -66,3 +66,5 @@ year = {2023}
   year={2023}
 }
 ```
+
+/Users/jeong-yonghun/miniconda3/envs/alignrec_env/bin/
