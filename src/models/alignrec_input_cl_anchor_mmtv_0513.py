@@ -386,6 +386,10 @@ class ALIGNREC_INPUT_CL_ANCHOR_MMTV_0513(GeneralRecommender):
             ua_embeddings, ia_embeddings, side_embeds, content_embeds = self.forward(
                 self.norm_adj,users, train=True)
 
+        print(f"[DEBUG] side_embeds.shape: {side_embeds.shape}")
+        print(f"[DEBUG] n_users: {self.n_users}, n_items: {self.n_items}")
+        print(f"[DEBUG] embedding_dim: {self.embedding_dim}")
+
         u_g_embeddings = ua_embeddings[users]
         pos_i_g_embeddings = ia_embeddings[pos_items]
         neg_i_g_embeddings = ia_embeddings[neg_items]
@@ -395,6 +399,11 @@ class ALIGNREC_INPUT_CL_ANCHOR_MMTV_0513(GeneralRecommender):
 
         side_embeds_users, side_embeds_items = torch.split(side_embeds, [self.n_users, self.n_items], dim=0)
         content_embeds_user, content_embeds_items = torch.split(content_embeds, [self.n_users, self.n_items], dim=0)
+
+        print(f"[DEBUG] side_embeds_users.shape: {side_embeds_users.shape}")
+        print(f"[DEBUG] side_embeds_items.shape: {side_embeds_items.shape}")
+        print(f"[DEBUG] content_embeds_user.shape: {content_embeds_user.shape}")
+        print(f"[DEBUG] content_embeds_items.shape: {content_embeds_items.shape}")
 
         h_id_i_fusion = self.W_id_i(content_embeds_items)
         h_mm_i_fusion = self.W_mm_i(side_embeds_items)

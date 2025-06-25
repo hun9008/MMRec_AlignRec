@@ -21,7 +21,7 @@ from utils.utils import init_seed, get_model
 
 import random
 
-def visualize_alignment(content_embeds_items, id_embeds, sample_size=500, lines_to_draw=10):
+def visualize_alignment(content_embeds_items, id_embeds, sample_size=500, lines_to_draw=10, title="t-SNE of Content-ID Feature Alignment"):
 
     content_np = content_embeds_items.detach().cpu().numpy()
     id_np = id_embeds.detach().cpu().numpy()
@@ -43,7 +43,7 @@ def visualize_alignment(content_embeds_items, id_embeds, sample_size=500, lines_
 
     # 시각화
     plt.figure(figsize=(10, 5))
-    plt.title("t-SNE: Closest 10 Content-ID Pairs")
+    plt.title(title)
     plt.scatter(content_2d[:, 0], content_2d[:, 1], color='skyblue', label='Content', alpha=0.8, marker='D')
     plt.scatter(id_2d[:, 0], id_2d[:, 1], color='lightcoral', label='ID', alpha=0.8, marker='o')
 
