@@ -30,9 +30,9 @@ class ForgetWModel(torch.nn.Module):
     def forward(self, *features):
         return [self.W(x) for x in features]
 
-class ALIGNREC_INPUT_CL_ANCHOR_DE_0625(GeneralRecommender):
+class ALIGNREC_INPUT_CL_ANCHOR_DE_PROJECTION_0625(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(ALIGNREC_INPUT_CL_ANCHOR_DE_0625, self).__init__(config, dataset)
+        super(ALIGNREC_INPUT_CL_ANCHOR_DE_PROJECTION_0625, self).__init__(config, dataset)
         self.sparse = True
         self.cl_loss = config['cl_loss'] # alpha
         self.n_ui_layers = config['n_ui_layers']
@@ -71,13 +71,13 @@ class ALIGNREC_INPUT_CL_ANCHOR_DE_0625(GeneralRecommender):
         )
 
         self.W_v = nn.Sequential(
-            nn.Linear(self.v_feat.shape[1], self.embedding_dim),
+            nn.Linear(self.embedding_dim, self.embedding_dim),
             nn.ReLU(),
             nn.Linear(self.embedding_dim, self.embedding_dim)
         )
 
         self.W_t = nn.Sequential(
-            nn.Linear(self.t_feat.shape[1], self.embedding_dim),
+            nn.Linear(self.embedding_dim, self.embedding_dim),
             nn.ReLU(),
             nn.Linear(self.embedding_dim, self.embedding_dim)
         )
@@ -430,13 +430,13 @@ class ALIGNREC_INPUT_CL_ANCHOR_DE_0625(GeneralRecommender):
         h_id_i_fusion = self.W_id_i(content_embeds_items)
         h_mm_i_fusion = self.W_mm_i(side_embeds_items)
 
-        h_v_fusion = self.learn_weight(side_embeds_items)[0]
-        h_t_fusion = self.forget_weight(side_embeds_items)[0]
+        de_v_feat = self.learn_weight(side_embeds_items)[0]
+        de_t_feat = self.forget_weight(side_embeds_items)[0]
 
-        print(f"DEBUG: h_v_fusion.shape: {h_v_fusion.shape}, h_t_fusion.shape: {h_t_fusion.shape}")
+        print(f"DEBUG: h_v_fusion.shape: {de_v_feat.shape}, h_t_fusion.shape: {de_t_feat.shape}")
 
-        # h_v_fusion = self.W_v(self.v_feat)
-        # h_t_fusion = self.W_t(self.t_feat)
+        h_v_fusion = self.W_v(de_v_feat)
+        h_t_fusion = self.W_t(de_t_feat)
 
         # h_id_u_fusion = self.W_id_u(side_embeds_users)
         # h_mm_u_fusion = self.W_enc_u(content_embeds_user)
