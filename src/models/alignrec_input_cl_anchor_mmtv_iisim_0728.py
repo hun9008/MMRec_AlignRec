@@ -335,7 +335,7 @@ class ALIGNREC_INPUT_CL_ANCHOR_MMTV_IISIM_0728(GeneralRecommender):
                 return all_embeddings_users, all_embeddings_items, mm_embeds, content_embeds, hist_hid[:,-1,:]
             return all_embeddings_users, all_embeddings_items, mm_embeds, content_embeds
 
-        return all_embeddings_users, all_embeddings_items
+        return all_embeddings_users, all_embeddings_items, mm_embeds, content_embeds
 
     def bpr_loss(self, users, pos_items, neg_items):
         pos_scores = torch.sum(torch.mul(users, pos_items), dim=1)
