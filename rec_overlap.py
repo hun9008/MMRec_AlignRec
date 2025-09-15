@@ -77,15 +77,6 @@ def pairwise_overlap(A: np.ndarray, B: np.ndarray) -> float:
         vals.append(len(set(a) & set(b)) / float(K))
     return float(np.mean(vals))
 
-def pairwise_jaccard(A: np.ndarray, B: np.ndarray) -> float:
-    """Mean Jaccard@K over users for two (n_users, K) arrays."""
-    vals = []
-    for a, b in zip(A, B):
-        sa, sb = set(a), set(b)
-        inter = len(sa & sb); uni = len(sa | sb)
-        vals.append(0.0 if uni == 0 else inter / float(uni))
-    return float(np.mean(vals))
-
 def compute_matrix(func, arrays: List[np.ndarray]) -> np.ndarray:
     m = len(arrays)
     M = np.zeros((m, m), dtype=np.float32)
@@ -137,17 +128,13 @@ def main():
         print(f"[INFO] aliases = {labels}")
 
         M_overlap = compute_matrix(pairwise_overlap, arrays)
-        M_jaccard = compute_matrix(pairwise_jaccard, arrays)
 
         # Save CSV
         save_csv(os.path.join(img_dir, f"rec_overlap_k{K}.csv"), labels, M_overlap)
-        save_csv(os.path.join(img_dir, f"rec_jaccard_k{K}.csv"), labels, M_jaccard)
 
         # Save heatmaps
         save_heatmap(os.path.join(img_dir, f"rec_overlap_k{K}.png"),
                      f"Recommendation Overlap@{K} (mean over users)", labels, M_overlap, dpi=args.img_dpi)
-        save_heatmap(os.path.join(img_dir, f"rec_jaccard_k{K}.png"),
-                     f"Recommendation Jaccard@{K} (mean over users)", labels, M_jaccard, dpi=args.img_dpi)
 
         # Console table
         def print_table(name, M):
@@ -163,16 +150,15 @@ def main():
                 print(fmt.format(*row))
 
         print_table("Overlap", M_overlap)
-        print_table("Jaccard", M_jaccard)
 
 if __name__ == "__main__":
     main()
 
 
 """
-python rec_overlap.py --dir saved_emb/rec_output --k 20
+python3 rec_overlap.py --dir saved_emb/rec_output --k 20
 # 또는 특정 조합만
-python rec_overlap.py --dir saved_emb/rec_output --k 20 --only final id text vision idmm
+python3 rec_overlap.py --dir saved_emb/rec_output --k 20 --only final id text vision idmm
 # 여러 K
-python rec_overlap.py --dir saved_emb/rec_output --k 10 20 50
+python3 rec_overlap.py --dir saved_emb/rec_output --k 10 20 50
 """
