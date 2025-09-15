@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+saved_emb/
+*.npy
+*.pt
+*.pkl
+*.ipynb_checkpoints/
 
 data/clothing
 data/elec

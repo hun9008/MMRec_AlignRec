@@ -1,0 +1,37 @@
+[LOAD] align_id shape=(7050, 64)
+[LOAD] align_mm shape=(7050, 64)
+[LOAD] align_proj shape=(7050, 64)
+[LOAD] align_text shape=(7050, 64)
+[LOAD] align_vision shape=(7050, 64)
+[LOAD] final_alignrec shape=(7050, 64)
+[LOAD] mm_out shape=(7050, 64)
+[LOAD] raw_id shape=(7050, 64)
+[LOAD] raw_text shape=(7050, 384)
+[LOAD] raw_vision shape=(7050, 4096)
+[NEIGHBORS] Computing Top-20 for align_id ...
+[NEIGHBORS] Computing Top-20 for align_mm ...
+[NEIGHBORS] Computing Top-20 for align_proj ...
+[NEIGHBORS] Computing Top-20 for align_text ...
+[NEIGHBORS] Computing Top-20 for align_vision ...
+[NEIGHBORS] Computing Top-20 for final_alignrec ...
+[NEIGHBORS] Computing Top-20 for mm_out ...
+[NEIGHBORS] Computing Top-20 for raw_id ...
+[NEIGHBORS] Computing Top-20 for raw_text ...
+[NEIGHBORS] Computing Top-20 for raw_vision ...
+
+=== Pairwise Overlap@20 (mean over items) ===
+                align_id      align_mm      align_proj    align_text    align_vision  final_alignrec  mm_out        raw_id        raw_text      raw_vision  
+align_id        --            0.9041        0.9590        0.4158        0.5173        0.0591          0.2919        0.0365        0.1431        0.1023      
+align_mm        0.9041        --            0.9380        0.4255        0.5235        0.0587          0.2930        0.0359        0.1451        0.1039      
+align_proj      0.9590        0.9380        --            0.4201        0.5213        0.0591          0.2929        0.0362        0.1440        0.1030      
+align_text      0.4158        0.4255        0.4201        --            0.2935        0.0465          0.2117        0.0300        0.1549        0.0860      
+align_vision    0.5173        0.5235        0.5213        0.2935        --            0.0479          0.2328        0.0304        0.1144        0.1186      
+final_alignrec  0.0591        0.0587        0.0591        0.0465        0.0479        --              0.0786        0.3383        0.0285        0.0204      
+mm_out          0.2919        0.2930        0.2929        0.2117        0.2328        0.0786          --            0.0405        0.1033        0.0773      
+raw_id          0.0365        0.0359        0.0362        0.0300        0.0304        0.3383          0.0405        --            0.0203        0.0130      
+raw_text        0.1431        0.1451        0.1440        0.1549        0.1144        0.0285          0.1033        0.0203        --            0.0543      
+raw_vision      0.1023        0.1039        0.1030        0.0860        0.1186        0.0204          0.0773        0.0130        0.0543        --          
+
+[SAVE] CSV -> images/overlap_k20.csv
+[SAVE] Heatmap -> images/overlap_k20.png
+

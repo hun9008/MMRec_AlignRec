@@ -16,7 +16,11 @@ colors = [
 ]
 custom_cmap = LinearSegmentedColormap.from_list("custom_sim_cmap", colors, N=256)
 
-emb_path = "./saved_emb/item_emb_alignrec_anchor_final.npy"
+target = "final_emb"
+
+# emb_path = "../saved_emb/0907_all_anchor/item_emb_align_mm.npy"
+emb_path = "../saved_emb/0907_all_anchor/item_emb_final_alignrec.npy"
+# emb_path = "./saved_emb/item_emb_alignrec_anchor_final.npy"
 # emb_path = "./saved_emb/item_emb_alignrec_anchor_projection_aligned.npy"
 # emb_path = "./saved_emb/item_emb_alignrec_final.npy"
 item_emb = np.load(emb_path)
@@ -74,13 +78,13 @@ ax.annotate("", xy=(0.5, 0.5), xycoords=axins.transAxes,
             xytext=(rect_center_x, rect_center_y), textcoords='data',
             arrowprops=dict(arrowstyle="-", color='red', lw=1.5))
 
-ax.set_title("Item–Item Cosine Similarity Heatmap [item_emb_alignrec_anchor_final]", fontsize=14)
+ax.set_title(f"[{target}] Item–Item Cosine Similarity Heatmap", fontsize=14)
 # ax.set_title("Item–Item Cosine Similarity Heatmap [item_emb_alignrec_anchor_projection_aligned]", fontsize=14)
 # ax.set_title("Item–Item Cosine Similarity Heatmap [item_emb_alignrec_final]", fontsize=14)
 ax.set_xlabel("Item", fontsize=12)
 ax.set_ylabel("Item", fontsize=12)
 plt.tight_layout()
-plt.savefig("item_emb_alignrec_anchor_final.png", dpi=300)
+plt.savefig(f"item_emb_alignrec_{target}.png", dpi=100)
 # plt.savefig("item_emb_alignrec_anchor_projection_aligned.png", dpi=300)
 # plt.savefig("item_emb_alignrec_final.png", dpi=300)
 # plt.show()

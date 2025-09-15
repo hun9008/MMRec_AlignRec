@@ -1,0 +1,19 @@
+[LOAD] final_emb shape=(7050, 64)
+[LOAD] raw_mm shape=(7050, 64)
+[LOAD] raw_id shape=(7050, 64)
+[LOAD] raw_enc shape=(7050, 768)
+[NEIGHBORS] Computing Top-20 for final_emb ...
+[NEIGHBORS] Computing Top-20 for raw_mm ...
+[NEIGHBORS] Computing Top-20 for raw_id ...
+[NEIGHBORS] Computing Top-20 for raw_enc ...
+
+=== Pairwise Overlap@20 (mean over items) ===
+              final_emb     raw_mm        raw_id        raw_enc     
+final_emb     --            0.6726        0.5727        0.4932      
+raw_mm        0.6726        --            0.3504        0.5915      
+raw_id        0.5727        0.3504        --            0.2838      
+raw_enc       0.4932        0.5915        0.2838        --          
+
+[SAVE] CSV -> images/overlap_k20_alignrec.csv
+[SAVE] Heatmap -> images/overlap_k20_alignrec.png
+
