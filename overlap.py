@@ -133,7 +133,7 @@ def multi_overlap_at_k(neigh_list: List[np.ndarray], k: int) -> Tuple[np.ndarray
 
 def discover_default_files(base_dir: str, variant: str):
     """Return (files, alias_map, search_dir). Searches <base_dir>/0907_all_<variant>/"""
-    search_dir = os.path.join(base_dir, f"0907_all_{variant}")
+    search_dir = os.path.join(base_dir)
 
     if variant == "anchor":
         candidates = [
@@ -165,13 +165,17 @@ def discover_default_files(base_dir: str, variant: str):
             "item_emb_final_alignrec.npy",
             "item_emb_mm_out.npy",
             "item_emb_raw_id.npy",
-            "item_feat_raw_mm.npy",
+            # "item_feat_raw_mm.npy",
+            "item_feat_raw_text.npy",
+            "item_feat_raw_vision.npy",
         ]
         aliases = [
             "final_emb",
             "raw_mm",
             "raw_id",
-            "raw_enc",
+            # "raw_enc",
+            "raw_text",
+            "raw_vision",
         ]
 
     alias_map = dict(zip(candidates, aliases))
@@ -324,3 +328,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# python3 overlap.py --variant alignrec --dir saved_emb/0915_wo_p_anchor --k 20
