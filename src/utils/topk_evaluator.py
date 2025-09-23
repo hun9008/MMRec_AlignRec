@@ -92,6 +92,55 @@ class TopKEvaluator(object):
             bool_rec_matrix.append([True if i in m else False for i in n])
         bool_rec_matrix = np.asarray(bool_rec_matrix)
 
+        ### add for per-user metrics ### 
+
+        ks = sorted(self.topk)
+        target_k = 20 if 20 in ks else ks[-1]
+
+        # 유저별 hit matrix 이미 있음
+        hits_cum = np.cumsum(bool_rec_matrix.astype(np.float32), axis=1)
+        pos_len_arr = np.array(pos_len_list, dtype=np.float32)
+        pos_len_arr_safe = np.where(pos_len_arr > 0, pos_len_arr, 1.0)
+
+        # per-user Recall@k
+        per_user_recall = hits_cum[:, target_k - 1] / pos_len_arr_safe
+        per_user_recall = np.where(pos_len_arr > 0, per_user_recall, 0.0)
+
+        # per-user NDCG@k  (여기 슬라이스 추가!)
+        log2_denom = 1.0 / np.log2(np.arange(2, target_k + 2, dtype=np.float32))
+        bm_k = bool_rec_matrix[:, :target_k].astype(np.float32)  # <-- slice to target_k
+        dcg_cum = np.cumsum(bm_k * log2_denom, axis=1)
+
+        def ideal_dcg(L, k):
+            if L <= 0: return 0.0
+            upto = int(min(L, k))
+            return float(np.sum(log2_denom[:upto]))
+
+        idcg_per_user = np.array([ideal_dcg(int(L), target_k) for L in pos_len_arr], dtype=np.float32)
+        per_user_ndcg = np.divide(dcg_cum[:, target_k - 1], np.maximum(idcg_per_user, 1e-12))
+        per_user_ndcg = np.where(pos_len_arr > 0, per_user_ndcg, 0.0)
+
+        # 저장
+        user_ids = eval_data.get_eval_users()
+        df = pd.DataFrame({
+            "user_id": user_ids,
+            f"recall@{target_k}": per_user_recall,
+            f"ndcg@{target_k}": per_user_ndcg
+        })
+        try:
+            rec_dir = self.config['recommend_topk']
+        except KeyError:
+            rec_dir = './recommend_topk'
+        out_dir = os.path.abspath(rec_dir)
+        os.makedirs(out_dir, exist_ok=True)
+        df.sort_values(f"ndcg@{target_k}", ascending=False).to_csv(
+            os.path.join(out_dir, f"user_metrics_k{target_k}.csv"), index=False
+        )
+
+        print(f"[INFO] Saved per-user metrics for k={target_k}")
+
+        ### add for per-user metrics ### 
+
         # get metrics
         metric_dict = {}
         result_list = self._calculate_metrics(pos_len_list, bool_rec_matrix)
