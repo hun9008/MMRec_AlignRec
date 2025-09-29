@@ -147,6 +147,9 @@ def discover_default_files(base_dir: str, variant: str):
             "item_emb_raw_id.npy",
             "item_feat_raw_text.npy",
             "item_feat_raw_vision.npy",
+            "../../data/beit3_128token_add_title_brand_to_text/image_feat.npy",
+            "../../data/baby/text_feat.npy",
+            "../../data/baby/image_feat.npy",
         ]
         aliases = [
             "proj_id",
@@ -155,8 +158,11 @@ def discover_default_files(base_dir: str, variant: str):
             "proj_text",
             "proj_vision",
             "final_emb",
+            "origin_mm",
+            "origin_id",
+            "origin_text",
+            "origin_vision",
             "raw_mm",
-            "raw_id",
             "raw_text",
             "raw_vision",
         ]
@@ -166,9 +172,9 @@ def discover_default_files(base_dir: str, variant: str):
             "item_emb_mm_out.npy",
             "item_emb_raw_id.npy",
             # "item_feat_raw_mm.npy",
-            "../../data/beit_128token_add_title_brand_to_text/image_feat.npy",
+            "../../data/beit3_128token_add_title_brand_to_text/image_feat.npy",
             "../../data/baby/text_feat.npy",
-            "../../data/baby/vision_feat.npy",
+            "../../data/baby/image_feat.npy",
             # "item_feat_raw_text.npy",
             # "item_feat_raw_vision.npy",
         ]
@@ -185,15 +191,22 @@ def discover_default_files(base_dir: str, variant: str):
     alias_map = dict(zip(candidates, aliases))
 
     found = []
-    for name in candidates:
-        p = os.path.join(search_dir, name)
-        if os.path.isfile(p):
-            found.append(p)
+    alias_map = {}
 
+    # 후보들 중 존재하는 파일만 수집 (절대경로 키, alias 값)
+    for name, alias in zip(candidates, aliases):
+        p = os.path.normpath(os.path.join(search_dir, name))
+        if os.path.isfile(p):
+            p = os.path.abspath(p)
+            found.append(p)
+            alias_map[p] = alias
+
+    # 후보가 하나도 안 잡히면(선택) 디렉토리 내 *.npy 폴백
     if not found:
-        # fallback: all .npy in search_dir
-        found = sorted(glob.glob(os.path.join(search_dir, "*.npy")))
-        alias_map.update({os.path.basename(f): os.path.splitext(os.path.basename(f))[0] for f in found})
+        for p in sorted(glob.glob(os.path.join(search_dir, "*.npy"))):
+            p = os.path.abspath(p)
+            found.append(p)
+            alias_map[p] = os.path.splitext(os.path.basename(p))[0]
 
     return found, alias_map, search_dir
 
@@ -205,8 +218,8 @@ def main():
     np.random.seed(args.seed)
 
     if args.files:
-        files = args.files
-        alias_map = {os.path.basename(f): os.path.splitext(os.path.basename(f))[0] for f in files}
+        files = [os.path.abspath(f) for f in args.files]
+        alias_map = {f: os.path.splitext(os.path.basename(f))[0] for f in files}  # 경로키 → 기본 alias=basename
         search_dir = os.path.commonpath(files) if len(files) > 1 else os.path.dirname(files[0])
         variant_suffix = "custom"
     else:
@@ -229,8 +242,8 @@ def main():
             raise ValueError(f"{f} is not 2D (N, D). Got shape {X.shape}")
         embs[f] = l2_normalize(X.astype(np.float32))
         shapes.add(X.shape[0])
-        print(f"[LOAD] {alias_map.get(os.path.basename(f), os.path.basename(f))} shape={X.shape}")
-
+        print(f"[LOAD] {alias_map.get(f, os.path.basename(f))} shape={X.shape}")
+        
     if len(shapes) != 1:
         raise ValueError(f"All embeddings must have the same number of items. Got Ns={shapes}")
     N = next(iter(shapes))
@@ -250,9 +263,20 @@ def main():
             print(f"  -> saved neighbors: {out_path}")
 
     # Overlap matrix (pairwise)
-    keys = list(neighbors.keys())
-    short_names = [alias_map.get(os.path.basename(k), os.path.basename(k)) for k in keys]
+    keys = list(embs.keys())
 
+    # alias 중복 방지: 동일 이름이 있으면 뒤에 (2), (3) 붙이기
+    seen = {}
+    short_names = []
+    for k in keys:
+        name = alias_map.get(k, os.path.basename(k))
+        if name in seen:
+            seen[name] += 1
+            name = f"{name}({seen[name]})"
+        else:
+            seen[name] = 1
+        short_names.append(name)
+        
     m = len(keys)
     overlap_mat = np.zeros((m, m), dtype=np.float32)
     for i, a in enumerate(keys):

@@ -206,48 +206,48 @@ def plot_three_side_by_side(top_align, top_anchor, top_aa, df_pos, out_path,
     print(f'[VIS] saved → {out_path}')
 
 # ===== (B) 한 그래프에 3모델 오버레이(엣지 색상으로 구분) =====
-def plot_overlay_three_models(top_align, top_anchor, top_aa, df_pos, out_path,
-                              max_edges_per_user=20, layout='bipartite'):
-    # 각 모델 서브그래프 데이터
-    uA, iA, eA = subgraph_edges_for_users(top_align, df_pos, max_edges_per_user)
-    uB, iB, eB = subgraph_edges_for_users(top_anchor, df_pos, max_edges_per_user)
-    uC, iC, eC = subgraph_edges_for_users(top_aa,    df_pos, max_edges_per_user)
+# def plot_overlay_three_models(top_align, top_anchor, top_aa, df_pos, out_path,
+#                               max_edges_per_user=20, layout='bipartite'):
+#     # 각 모델 서브그래프 데이터
+#     uA, iA, eA = subgraph_edges_for_users(top_align, df_pos, max_edges_per_user)
+#     uB, iB, eB = subgraph_edges_for_users(top_anchor, df_pos, max_edges_per_user)
+#     uC, iC, eC = subgraph_edges_for_users(top_aa,    df_pos, max_edges_per_user)
 
-    # 전체 노드(유니온)로 단일 그래프 구성
-    users_all = sorted(set(uA) | set(uB) | set(uC))
-    items_all = sorted(set(iA) | set(iB) | set(iC))
+#     # 전체 노드(유니온)로 단일 그래프 구성
+#     users_all = sorted(set(uA) | set(uB) | set(uC))
+#     items_all = sorted(set(iA) | set(iB) | set(iC))
 
-    GA = nx.Graph(); GA.add_nodes_from(users_all, bipartite=0); GA.add_nodes_from(items_all, bipartite=1); GA.add_edges_from(eA)
-    GB = nx.Graph(); GB.add_nodes_from(users_all, bipartite=0); GB.add_nodes_from(items_all, bipartite=1); GB.add_edges_from(eB)
-    GC = nx.Graph(); GC.add_nodes_from(users_all, bipartite=0); GC.add_nodes_from(items_all, bipartite=1); GC.add_edges_from(eC)
+#     GA = nx.Graph(); GA.add_nodes_from(users_all, bipartite=0); GA.add_nodes_from(items_all, bipartite=1); GA.add_edges_from(eA)
+#     GB = nx.Graph(); GB.add_nodes_from(users_all, bipartite=0); GB.add_nodes_from(items_all, bipartite=1); GB.add_edges_from(eB)
+#     GC = nx.Graph(); GC.add_nodes_from(users_all, bipartite=0); GC.add_nodes_from(items_all, bipartite=1); GC.add_edges_from(eC)
 
-    # 동일 레이아웃(좌우 분리 or spring)로 그려 공정 비교
-    if layout == 'bipartite':
-        pos = make_bipartite_layout(users_all, items_all)
-    else:
-        # 스프링 레이아웃은 결합 그래프 기준으로 한 번만 계산
-        G_union = nx.Graph()
-        G_union.add_nodes_from(users_all, bipartite=0)
-        G_union.add_nodes_from(items_all, bipartite=1)
-        G_union.add_edges_from(eA + eB + eC)
-        pos = nx.spring_layout(G_union, k=0.25, iterations=80, seed=42)
+#     # 동일 레이아웃(좌우 분리 or spring)로 그려 공정 비교
+#     if layout == 'bipartite':
+#         pos = make_bipartite_layout(users_all, items_all)
+#     else:
+#         # 스프링 레이아웃은 결합 그래프 기준으로 한 번만 계산
+#         G_union = nx.Graph()
+#         G_union.add_nodes_from(users_all, bipartite=0)
+#         G_union.add_nodes_from(items_all, bipartite=1)
+#         G_union.add_edges_from(eA + eB + eC)
+#         pos = nx.spring_layout(G_union, k=0.25, iterations=80, seed=42)
 
-    plt.figure(figsize=(12, 8))
-    # 노드는 한 번만 그림
-    nx.draw_networkx_nodes(GA, pos, nodelist=users_all, node_color='lightblue', node_size=120, alpha=0.9, label='users')
-    nx.draw_networkx_nodes(GA, pos, nodelist=items_all, node_color='salmon',    node_size=60,  alpha=0.85, label='items')
+#     plt.figure(figsize=(12, 8))
+#     # 노드는 한 번만 그림
+#     nx.draw_networkx_nodes(GA, pos, nodelist=users_all, node_color='lightblue', node_size=120, alpha=0.9, label='users')
+#     nx.draw_networkx_nodes(GA, pos, nodelist=items_all, node_color='salmon',    node_size=60,  alpha=0.85, label='items')
 
-    # 엣지는 모델별 색상
-    nx.draw_networkx_edges(GA, pos, edge_color='#1f77b4', width=0.8, alpha=0.6, label='AlignRec')
-    nx.draw_networkx_edges(GB, pos, edge_color='#2ca02c', width=0.8, alpha=0.6, label='Anchor')
-    nx.draw_networkx_edges(GC, pos, edge_color='#ff7f0e', width=0.8, alpha=0.6, label='AlignRec+Anchor')
+#     # 엣지는 모델별 색상
+#     nx.draw_networkx_edges(GA, pos, edge_color='#1f77b4', width=0.8, alpha=0.6, label='AlignRec')
+#     nx.draw_networkx_edges(GB, pos, edge_color='#2ca02c', width=0.8, alpha=0.6, label='Anchor')
+#     nx.draw_networkx_edges(GC, pos, edge_color='#ff7f0e', width=0.8, alpha=0.6, label='AlignRec+Anchor')
 
-    plt.title(f'Overlay: Top-{len(top_align)} users per model')
-    plt.axis('off')
-    plt.legend(loc='upper center', ncol=4, frameon=False)
-    plt.savefig(out_path, dpi=300, bbox_inches='tight')
-    plt.close()
-    print(f'[VIS] saved → {out_path}')
+#     plt.title(f'Overlay: Top-{len(top_align)} users per model')
+#     plt.axis('off')
+#     plt.legend(loc='upper center', ncol=4, frameon=False)
+#     plt.savefig(out_path, dpi=300, bbox_inches='tight')
+#     plt.close()
+#     print(f'[VIS] saved → {out_path}')
 
 
 # ===== 실행 =====
@@ -257,8 +257,8 @@ plot_three_side_by_side(
     max_edges_per_user=20, layout='bipartite'
 )
 
-plot_overlay_three_models(
-    top_align, top_anchor, top_aa, df_pos,
-    out_path=os.path.join(OUT_DIR, 'topK_subgraphs_overlay.png'),
-    max_edges_per_user=20, layout='bipartite'   # 'spring'으로 바꿔도 됨
-)
+# plot_overlay_three_models(
+#     top_align, top_anchor, top_aa, df_pos,
+#     out_path=os.path.join(OUT_DIR, 'topK_subgraphs_overlay.png'),
+#     max_edges_per_user=20, layout='bipartite'   # 'spring'으로 바꿔도 됨
+# )
