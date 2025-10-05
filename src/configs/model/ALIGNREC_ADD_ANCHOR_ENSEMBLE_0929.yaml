@@ -22,8 +22,8 @@ learning_rate_scheduler: [0.96, 50]
 device: cuda
 
 # ===== 앙상블 전용 설정 =====
-agg_ckpt1: "saved/alignrec_best.pt"          # ALIGNREC 가중치
-agg_ckpt2: "saved/alignrec_anchor_best.pt"   # ALIGNREC_ANCHOR 가중치
+agg_ckpt1: "saved/ALIGNREC_best.pth"          # ALIGNREC 가중치
+agg_ckpt2: "saved/ALIGNREC_ANCHOR_best.pth"   # ALIGNREC_ANCHOR 가중치
 agg_model1: "ALIGNREC"
 agg_model2: "ALIGNREC_ANCHOR"
 agg_weight1: 0.4      # s = 0.4*s1 + 0.6*s2

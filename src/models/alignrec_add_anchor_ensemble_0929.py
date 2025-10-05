@@ -31,22 +31,20 @@ class ALIGNREC_ADD_ANCHOR_ENSEMBLE_0929(GeneralRecommender):
     def __init__(self, config, dataset):
         super().__init__(config, dataset)
 
-        # ---- Config ----
-        self.ckpt1 = config.get("agg_ckpt1", None)
-        self.ckpt2 = config.get("agg_ckpt2", None)
+        # Config 객체는 dict처럼 인덱싱
+        self.ckpt1 = config['agg_ckpt1'] if 'agg_ckpt1' in config else None
+        self.ckpt2 = config['agg_ckpt2'] if 'agg_ckpt2' in config else None
         if not self.ckpt1 or not self.ckpt2:
             raise ValueError("agg_ckpt1, agg_ckpt2 경로를 config에 지정하세요.")
 
-        self.model_name1 = str(config.get("agg_model1", "ALIGNREC"))
-        self.model_name2 = str(config.get("agg_model2", "ALIGNREC_ANCHOR"))
-        if self.model_name1 not in _MODEL_REGISTRY or self.model_name2 not in _MODEL_REGISTRY:
-            raise ValueError(f"지원하지 않는 모델명입니다. {_MODEL_REGISTRY.keys()} 중에서 선택하세요.")
-
-        self.w1 = float(config.get("agg_weight1", 0.5))
-        self.w2 = float(config.get("agg_weight2", 0.5))
-        self.norm = str(config.get("agg_norm", "zscore")).lower()
-        self.device = torch.device(config.get("device", "cuda" if torch.cuda.is_available() else "cpu"))
-
+        self.model_name1 = str(config['agg_model1'] if 'agg_model1' in config else "ALIGNREC")
+        self.model_name2 = str(config['agg_model2'] if 'agg_model2' in config else "ALIGNREC_ANCHOR")
+        # ...
+        self.w1 = float(config['agg_weight1'] if 'agg_weight1' in config else 0.5)
+        self.w2 = float(config['agg_weight2'] if 'agg_weight2' in config else 0.5)
+        self.norm = str(config['agg_norm'] if 'agg_norm' in config else "zscore").lower()
+        self.device = torch.device(config['device'])
+        
         # ---- Sub-models ----
         # 동일한 dataset을 전달하여 user/item index space를 일치시킨다.
         SubModel1 = _MODEL_REGISTRY[self.model_name1]
