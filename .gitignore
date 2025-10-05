@@ -153,4 +153,5 @@ data/baby/t_prime_feat.npy
 
 
 saved/*
-cache_images/*ijkl_overlap_alignrec/result.csv
+cache_images/*
+ijkl_overlap_alignrec/result.csv
