@@ -96,16 +96,112 @@ def pairwise_cos_stats_per_item(id_emb, mm_emb, t_emb, v_emb):
     per_item_mean = stacked.mean(dim=1)
     return report, per_item_mean
 
+# @torch.no_grad()
+# def export_ijkl_csv(save_csv_path: str,
+#                     mask_all_true: torch.Tensor,
+#                     aux: dict,
+#                     Ef: torch.Tensor):
+#     """
+#     (i, j, l, k)를 CSV로 저장.
+#       - j: (p_close ∩ f_close) 중 Ef에서 i와 코사인 유사도 최대
+#       - k: (p_far   ∩ f_far)   중 Ef에서 i와 코사인 유사도 최소
+#       - l: (p_middle ∩ f_middle) 전체 후보를 모두 저장
+#     """
+#     os.makedirs(os.path.dirname(save_csv_path), exist_ok=True)
+
+#     Ef = normalize_rows(Ef)  # (n, d)
+#     n = Ef.size(0)
+
+#     p_close = aux["p_close"]
+#     f_close = aux["f_close"]
+#     p_far   = aux["p_far"]
+#     f_far   = aux["f_far"]
+#     p_mid_m = aux["p_middle_mask"]
+#     f_mid_m = aux["f_middle_mask"]
+
+#     def idxs_to_mask(idxs, N):
+#         m = torch.zeros((N, N), dtype=torch.bool, device=idxs.device)
+#         m.scatter_(1, idxs, True)
+#         return m
+
+#     p_close_mask = idxs_to_mask(p_close, n)
+#     f_close_mask = idxs_to_mask(f_close, n)
+#     p_far_mask   = idxs_to_mask(p_far,   n)
+#     f_far_mask   = idxs_to_mask(f_far,   n)
+
+#     both_close = (p_close_mask & f_close_mask)
+#     both_far   = (p_far_mask   & f_far_mask)
+#     both_mid   = (p_mid_m      & f_mid_m)
+
+#     rows = []
+#     close_set = set()
+#     far_set   = set()
+
+#     true_idxs = mask_all_true.nonzero(as_tuple=False).flatten().tolist()
+#     for i in true_idxs:
+#         sim_row = (Ef[i] @ Ef.T)  # (n,)
+
+#         # j: close 교집합 중 Ef에서 i와 코사인 유사도 최대
+#         close_candidates = both_close[i].nonzero(as_tuple=False).flatten()
+#         if len(close_candidates) > 0:
+#             j = int(close_candidates[sim_row[close_candidates].argmax().item()])
+#         else:
+#             j = -1
+
+#         # k: far 교집합 중 Ef에서 i와 코사인 유사도 최소
+#         far_candidates = both_far[i].nonzero(as_tuple=False).flatten()
+#         if len(far_candidates) > 0:
+#             k = int(far_candidates[sim_row[far_candidates].argmin().item()])
+#         else:
+#             k = -1
+
+#         # l: middle 교집합 중 모든 후보
+#         mid_candidates = both_mid[i].nonzero(as_tuple=False).flatten().tolist()
+#         if len(mid_candidates) == 0:
+#             rows.append((i, j, -1, k))
+#         else:
+#             for l in mid_candidates:
+#                 rows.append((i, j, int(l), k))
+
+#         if j >= 0:
+#             close_set.add(j)
+#         if k >= 0:
+#             far_set.add(k)
+
+#     # CSV 저장
+#     with open(save_csv_path, "w", newline="") as f:
+#         writer = csv.writer(f)
+#         writer.writerow(["i", "j(close)", "l(middle)", "k(far)"])
+#         writer.writerows(rows)
+
+#     # 세트 저장
+#     out_dir = os.path.dirname(save_csv_path)
+#     close_txt = os.path.join(out_dir, "close_item.txt")
+#     far_txt   = os.path.join(out_dir, "far_item.txt")
+#     with open(close_txt, "w") as f:
+#         for x in sorted(close_set):
+#             f.write(f"{x}\n")
+#     with open(far_txt, "w") as f:
+#         for x in sorted(far_set):
+#             f.write(f"{x}\n")
+
+#     print(f"Saved ijkl csv: {save_csv_path} (rows: {len(rows)})")
+#     print(f"Saved close set to {close_txt} (|close|={len(close_set)})")
+#     print(f"Saved far   set to {far_txt}   (|far|={len(far_set)})")
 @torch.no_grad()
 def export_ijkl_csv(save_csv_path: str,
                     mask_all_true: torch.Tensor,
                     aux: dict,
-                    Ef: torch.Tensor):
+                    Ef: torch.Tensor,
+                    top_close: int = 5,
+                    top_far: int = 5):
     """
-    (i, j, l, k)를 CSV로 저장.
-      - j: (p_close ∩ f_close) 중 Ef에서 i와 코사인 유사도 최대
-      - k: (p_far   ∩ f_far)   중 Ef에서 i와 코사인 유사도 최소
-      - l: (p_middle ∩ f_middle) 전체 후보를 모두 저장
+    CSV 컬럼: i, j(close), l(middle), k(far)
+
+    저장 정책 (행 단위, 폭발 방지):
+      1) CLOSE 블록: (i, j, -1, -1)  for j in top-`top_close` (교집합 후보 중 Ef 유사도 내림차순)
+      2) MIDDLE 블록: (i, -1, l, -1) for l in 모든 교집합 후보
+      3) FAR   블록: (i, -1, -1, k)  for k in top-`top_far` (교집합 후보 중 Ef 유사도 오름차순)
     """
     os.makedirs(os.path.dirname(save_csv_path), exist_ok=True)
 
@@ -139,34 +235,39 @@ def export_ijkl_csv(save_csv_path: str,
 
     true_idxs = mask_all_true.nonzero(as_tuple=False).flatten().tolist()
     for i in true_idxs:
+        # i와의 유사도 벡터 (Ef 기준)
         sim_row = (Ef[i] @ Ef.T)  # (n,)
 
-        # j: close 교집합 중 Ef에서 i와 코사인 유사도 최대
+        # ---- CLOSE: top_close개 (유사도 내림차순) ----
         close_candidates = both_close[i].nonzero(as_tuple=False).flatten()
-        if len(close_candidates) > 0:
-            j = int(close_candidates[sim_row[close_candidates].argmax().item()])
-        else:
-            j = -1
+        if close_candidates.numel() > 0:
+            # 값이 큰 게 가까움 → 내림차순 정렬
+            sims = sim_row[close_candidates]
+            topc = min(top_close, close_candidates.numel())
+            # torch.topk는 기본 내림차순 largest=True
+            vals, idxs = torch.topk(sims, k=topc, largest=True, sorted=True)
+            top_close_ids = close_candidates[idxs].tolist()
+            for j in top_close_ids:
+                rows.append((i, int(j), -1, -1))
+                close_set.add(int(j))
 
-        # k: far 교집합 중 Ef에서 i와 코사인 유사도 최소
+        # ---- MIDDLE: 전부 ----
+        mid_candidates = both_mid[i].nonzero(as_tuple=False).flatten()
+        if mid_candidates.numel() > 0:
+            for l in mid_candidates.tolist():
+                rows.append((i, -1, int(l), -1))
+
+        # ---- FAR: top_far개 (유사도 오름차순) ----
         far_candidates = both_far[i].nonzero(as_tuple=False).flatten()
-        if len(far_candidates) > 0:
-            k = int(far_candidates[sim_row[far_candidates].argmin().item()])
-        else:
-            k = -1
-
-        # l: middle 교집합 중 모든 후보
-        mid_candidates = both_mid[i].nonzero(as_tuple=False).flatten().tolist()
-        if len(mid_candidates) == 0:
-            rows.append((i, j, -1, k))
-        else:
-            for l in mid_candidates:
-                rows.append((i, j, int(l), k))
-
-        if j >= 0:
-            close_set.add(j)
-        if k >= 0:
-            far_set.add(k)
+        if far_candidates.numel() > 0:
+            sims = sim_row[far_candidates]
+            topf = min(top_far, far_candidates.numel())
+            # 가장 먼 것 → 유사도 오름차순. topk로 하면 largest=False가 없으니 argsort 사용
+            sorted_idx = torch.argsort(sims, dim=0, descending=False)  # 작은 값부터
+            top_far_ids = far_candidates[sorted_idx[:topf]].tolist()
+            for k in top_far_ids:
+                rows.append((i, -1, -1, int(k)))
+                far_set.add(int(k))
 
     # CSV 저장
     with open(save_csv_path, "w", newline="") as f:

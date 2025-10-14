@@ -1,5 +1,5 @@
 # general
-gpu_id: 0
+gpu_id: 6
 use_gpu: True
 seed: [999]
 
@@ -42,7 +42,7 @@ field_separator: "\t"
 # metrics: ["Recall", "NDCG", "Precision", "MAP"]
 # topk: [5, 10, 20, 50]
 metrics: ["Recall", "NDCG"]
-topk: [5, 10, 20]
+topk: [5, 10, 20, 30, 40, 50]
 valid_metric: Recall@20
 eval_batch_size: 4096
 

@@ -17,7 +17,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', '-m', type=str, default='SELFCFED_LGN', help='name of models')
     parser.add_argument('--dataset', '-d', type=str, default='baby', help='name of datasets')
-    parser.add_argument('--gpu_id', type=int, default=0, help='use which gpu id')
+    parser.add_argument('--gpu_id', type=int, default=6, help='use which gpu id')
     parser.add_argument('--log_file_name', type=str, default='change_learning_rate', help='log file name (already register model and dataset in code)')
     parser.add_argument('--multimodal_data_dir', type=str, default='', help='image and text feat dir')
     parser.add_argument('--use_ln', action='store_true', help='use layer_norm after loading mm features')

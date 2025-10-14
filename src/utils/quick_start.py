@@ -74,6 +74,22 @@ def quick_start(model, dataset, config_dict, save_model=True, mg=False):
         model = get_model(config['model'])(config, train_data).to(config['device'])
         logger.info(model)
 
+
+        # >>> [ADD] Auto grid-search for linear blending weight (w1)
+        def cfg_get(cfg, key, default=None):
+            return cfg[key] if key in cfg else default
+
+        if str(config['model']).upper() == 'ALIGNREC_ANCHOR_ENSEMBLE_A_LB' and ('agg_auto_tune_w1' in config and config['agg_auto_tune_w1']):
+            logger.info('[AutoTune] Start grid-search for w1 on validation split...')
+            try:
+                use_emb = (str(cfg_get(config, 'agg_blend_target', 'score')).lower() == 'embedding')
+                topk = int(cfg_get(config, 'topk', 20))
+                result = model.tune_weight_by_grid(valid_data, k=topk, use_embedding=use_emb)
+                logger.info(f'[AutoTune] Done: {result}')
+            except Exception as e:
+                logger.exception(f'[AutoTune] Failed: {e}')
+        # <<< [END ADD]
+
         # trainer loading and initialization
         trainer = get_trainer()(config, model, mg)
         # debug

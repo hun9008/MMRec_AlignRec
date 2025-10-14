@@ -1,5 +1,10 @@
 # MMRec
 
+run command
+```
+python src/main.py --model ALIGNREC_ANCHOR --dataset baby --log_file_name alignrec_anchor --ui_cosine_loss --multimodal_data_dir data/beit3_128token_add_title_brand_to_text/
+```
+
 <div align="center">
   <a href="https://github.com/enoche/MultimodalRecSys"><img width="300px" height="auto" src="https://github.com/enoche/MMRec/blob/master/images/logo.png"></a>
 </div>
