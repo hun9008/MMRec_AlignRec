@@ -14,8 +14,9 @@ learning_rate: [0.001]
 cl_loss: [0.01]
 
 # sim_weight: [0.1,0.2, 0.3,0.4, 0.5]
-sim_weight: [0.3]
+# sim_weight: [0.01, 0.1]
+sim_weight: [0.1]
 ui_cosine_loss_weight: 0.1
-# sim_weight: [0.0001,0.001,0.01,0.1,1.0]
+# sim_weight: [0.0001,0.001,0.01]
 
 hyper_parameters: ["cl_loss","learning_rate","n_layers","knn_k","sim_weight"]

@@ -147,7 +147,7 @@ def discover_default_files(base_dir: str, variant: str):
             "item_emb_raw_id.npy",
             "item_feat_raw_text.npy",
             "item_feat_raw_vision.npy",
-            "../../data/beit3_128token_add_title_brand_to_text/image_feat.npy",
+            "../../data/baby_beit3_128token_add_title_brand_to_text/image_feat.npy",
             "../../data/baby/text_feat.npy",
             "../../data/baby/image_feat.npy",
         ]
@@ -172,7 +172,7 @@ def discover_default_files(base_dir: str, variant: str):
             "item_emb_mm_out.npy",
             "item_emb_raw_id.npy",
             # "item_feat_raw_mm.npy",
-            "../../data/beit3_128token_add_title_brand_to_text/image_feat.npy",
+            "../../data/baby_beit3_128token_add_title_brand_to_text/image_feat.npy",
             "../../data/baby/text_feat.npy",
             "../../data/baby/image_feat.npy",
             # "item_feat_raw_text.npy",
@@ -314,7 +314,7 @@ def main():
     ax.set_xticks(range(m)); ax.set_yticks(range(m))
     ax.set_xticklabels(short_names, rotation=45, ha="right")
     ax.set_yticklabels(short_names)
-    ax.set_title(f"Overlap@{args.k} (mean over items) - {variant_suffix}")
+    # ax.set_title(f"Overlap@{args.k} (mean over items) - {variant_suffix}")
     fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     if m <= 20:
         for i in range(m):
@@ -322,7 +322,7 @@ def main():
                 ax.text(j, i, ("1.00" if i == j else f"{overlap_mat[i,j]:.2f}"),
                         ha="center", va="center", fontsize=8)
     plt.tight_layout()
-    img_path = os.path.join(img_dir, f"overlap_k{args.k}_{variant_suffix}.png")
+    img_path = os.path.join(img_dir, f"overlap_k{args.k}_{variant_suffix}_final.png")
     plt.savefig(img_path, dpi=200); plt.close(fig)
     print(f"[SAVE] Heatmap -> {img_path}")
 

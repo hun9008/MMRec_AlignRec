@@ -102,7 +102,7 @@ def save_heatmap(path: str, title: str, labels: List[str], M: np.ndarray, dpi: i
     ax.set_xticks(range(m)); ax.set_yticks(range(m))
     ax.set_xticklabels(labels, rotation=45, ha="right")
     ax.set_yticklabels(labels)
-    ax.set_title(title)
+    # ax.set_title(title)
     fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     if m <= 20:
         for i in range(m):

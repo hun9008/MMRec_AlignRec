@@ -3,7 +3,7 @@ import numpy as np
 files = [
     "./baby/text_feat.npy",
     "./baby/image_feat.npy",
-    "./beit3_128token_add_title_brand_to_text/image_feat.npy"
+    "./baby_beit3_128token_add_title_brand_to_text/image_feat.npy"
 ]
 
 image_feat = [

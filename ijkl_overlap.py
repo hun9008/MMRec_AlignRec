@@ -291,7 +291,7 @@ def export_ijkl_csv(save_csv_path: str,
     print(f"Saved far   set to {far_txt}   (|far|={len(far_set)})")
 
 def main(
-    save_dir="saved_emb/epoch_last",
+    save_dir="saved_emb/alignrec_anchor_1101",
     k_close=10, k_far=10,
     SAVE_MASKS=False,
     device="cuda" if torch.cuda.is_available() else "cpu",
@@ -350,7 +350,7 @@ def main(
 
     # ----- CSV 내보내기 -----
     export_ijkl_csv(
-        save_csv_path=os.path.join("./ijkl_overlap", "result.csv"),
+        save_csv_path=os.path.join("./ijkl_overlap_1104", "result.csv"),
         mask_all_true=mask_all_true,
         aux=aux,
         Ef=Ef,
@@ -366,7 +366,7 @@ def main(
 
 if __name__ == "__main__":
     main(
-        save_dir="saved_emb/0927_all_anchor",
+        save_dir="saved_emb/alignrec_anchor_1101",
         k_close=10, k_far=10,
         SAVE_MASKS=False,
     )

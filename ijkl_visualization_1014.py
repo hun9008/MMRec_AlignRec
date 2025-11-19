@@ -44,7 +44,7 @@ try:
 except Exception:
     pass
 
-RESULT_CSV    = "./ijkl_overlap/result.csv"
+RESULT_CSV    = "./ijkl_overlap_1104/result.csv"
 MAPPING_CSV   = "./data/baby/i_id_mapping.csv"
 METADATA_JSON = "./data/baby/metadata_baby.json"
 INTER_PATH    = "./data/baby/baby.inter"   # TSV/CSV 자동 인식
@@ -381,8 +381,8 @@ def visualize_anchor_with_topk_close(anchor_i: int, js_topk: list, id2asin: dict
 # ------------- main -------------
 def main():
     ap = argparse.ArgumentParser(description="Visualize top-k close neighbors (ijkl_overlap) with 2-hop + image/text cosine.")
-    ap.add_argument("--anchor", type=int, default=100, help="고정할 anchor i (부족하면 자동 대체/축소)")
-    ap.add_argument("--topk", type=int, default=4, help="가까운 이웃 j 개수")
+    ap.add_argument("--anchor", type=int, default=9, help="고정할 anchor i (부족하면 자동 대체/축소)")
+    ap.add_argument("--topk", type=int, default=5, help="가까운 이웃 j 개수")
     ap.add_argument("--out", type=str, default="ijkl_visualization_topkclose", help="출력 파일명")
     ap.add_argument("--dedup", type=str, default="global", choices=["global","consecutive"],
                     help="중복 제거 방식: global=전역 중복 제거, consecutive=연속 중복 제거")
@@ -518,7 +518,7 @@ def main():
     txt_sims[anchor_i] = None
 
     visualize_anchor_with_topk_close(
-        anchor_i, js_topk, id2asin, meta, args.out + f"_{anchor_i}.png",
+        anchor_i, js_topk, id2asin, meta, "1104" + args.out + f"{anchor_i}.png",
         log_images=args.log_images, noimg=args.noimg,
         twohop_counts=twohop_counts,
         img_sims=img_sims, txt_sims=txt_sims

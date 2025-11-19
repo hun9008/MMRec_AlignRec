@@ -1,0 +1,52 @@
+# 어떤 모델을 돌릴지
+model: ALIGNREC_AGG
+
+# (중요) 서브모델의 아키텍처/그래프 설정은
+# 학습 때와 완전히 동일해야 체크포인트가 맞게 로드됩니다.
+embedding_size: 64
+n_ui_layers: 2
+n_layers: 1        # 리스트가 아니라 단일 값으로 확정
+knn_k: 10
+
+# 학습 관련 하이퍼파라미터는 의미 없지만,
+# 서브모델을 구성할 때 참조될 수 있으므로 학습 시 쓰던 값 유지 권장
+learning_rate: 0.001
+cl_loss: 0.01
+sim_weight: 0.01
+ui_cosine_loss_weight: 0.1
+lambda_weight: 0.01
+lambda_coeff: 0.9
+learning_rate_scheduler: [0.96, 50]
+
+# 디바이스
+device: cuda
+
+# ===== 앙상블 전용 설정 =====
+agg_ckpt1: "saved/ALIGNREC_best.pth"          # ALIGNREC 가중치
+agg_ckpt2: "saved/FREEDOM_best.pth"   # ALIGNREC_ANCHOR_1013 가중치
+agg_model1: "ALIGNREC"
+agg_model2: "FREEDOM"
+agg_weight1: 0.8      # s = 0.4*s1 + 0.6*s2
+agg_weight2: 0.2
+agg_norm: "zscore"    # "none" | "softmax" | "zscore" | "minmax"
+
+# 평가 배치 등
+eval_batch_size: 64
+train_batch_size: 64
+
+# 하이퍼 파라미터 스윕은 하지 않고 단일 실행
+hyper_parameters: []
+
+epochs: 1
+
+mm_image_weight: 0.1
+# dropout: [0.8, 0.9]
+dropout: [0.8]
+
+feat_embed_dim: 64
+weight_size: [64, 64]
+
+reg_weight: [1e-05]
+
+n_mm_layers: 1
+n_ui_layers: 2
