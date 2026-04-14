@@ -52,17 +52,17 @@ class ALIGNREC(GeneralRecommender):
         self.norm_adj = self.sparse_mx_to_torch_sparse_tensor(self.norm_adj).float().to(self.device)
 
 
-        if self.mm_feat is not None:
-            self.mm_embedding = nn.Embedding.from_pretrained(self.mm_feat, freeze=False)
+        if self.v_feat is not None:
+            self.mm_embedding = nn.Embedding.from_pretrained(self.v_feat, freeze=False)
             mm_adj = build_sim(self.mm_embedding.weight.detach())
             mm_adj = build_knn_normalized_graph(mm_adj, topk=self.knn_k, is_sparse=self.sparse,
                                                     norm_type='sym')
             self.mm_original_adj = mm_adj.cuda()
 
-        if self.mm_feat is not None:
+        if self.v_feat is not None:
             if self.use_ln:
-                self.mm_ln = nn.LayerNorm(self.mm_feat.shape[1])
-            self.mm_trs = nn.Linear(self.mm_feat.shape[1], self.embedding_dim)
+                self.v_ln = nn.LayerNorm(self.v_feat.shape[1])
+            self.mm_trs = nn.Linear(self.v_feat.shape[1], self.embedding_dim)
 
         self.softmax = nn.Softmax(dim=-1)
 
@@ -144,9 +144,9 @@ class ALIGNREC(GeneralRecommender):
         return torch.sparse.FloatTensor(indices, values, shape)
 
     def forward(self, adj, users=None, train=False):
-        if self.mm_feat is not None:
+        if self.v_feat is not None:
             if self.use_ln:
-                mm_feats = self.mm_trs(self.mm_ln(self.mm_embedding.weight))
+                mm_feats = self.mm_trs(self.v_ln(self.mm_embedding.weight))
             else:
                 mm_feats = self.mm_trs(self.mm_embedding.weight)
 
@@ -270,8 +270,8 @@ class ALIGNREC(GeneralRecommender):
         if self.ui_cosine_loss:
             batch_mf_loss+=(1 - F.cosine_similarity(u_g_embeddings, pos_i_g_embeddings, dim=-1).mean())*self.ui_cosine_loss_weight
 
-        pos_ii_batch_sim_mat = build_sim(self.mm_feat[pos_items])
-        neg_ii_batch_sim_mat = build_sim(self.mm_feat[neg_items])
+        pos_ii_batch_sim_mat = build_sim(self.v_feat[pos_items])
+        neg_ii_batch_sim_mat = build_sim(self.v_feat[neg_items])
 
         if self.use_bce:
             ii_sim_loss = self.sim_sigmoid_loss(side_embeds_items[pos_items], pos_ii_batch_sim_mat) + self.sim_sigmoid_loss(side_embeds_items[neg_items], neg_ii_batch_sim_mat)

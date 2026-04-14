@@ -1,10 +1,12 @@
 # general
 gpu_id: 6
 use_gpu: True
-seed: [999]
+# seed: [999]
+# seed: [333]
+seed: [999, 777, 555, 333, 111]
 
 # multi-modal raw features
-data_path: './data/'
+data_path: '../data/data/'
 inter_splitting_label: 'x_label'
 filter_out_cod_start_users: True
 is_multimodal_model: True
@@ -19,8 +21,8 @@ req_training: True
 #embedding_size: 3780
 
 # training settings
-epochs: 50
-stopping_step: 10000
+epochs: 100
+stopping_step: 10000 
 train_batch_size: 2048
 learner: adam
 learning_rate: 0.001

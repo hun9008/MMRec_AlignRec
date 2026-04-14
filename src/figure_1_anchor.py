@@ -83,7 +83,7 @@ def visualize_alignment_3views(
     lines_to_draw=5000,
     title="",
     filename="tsne_result_3views.png",
-    max_pair_distance=3.0,
+    max_pair_distance=1e9,
 ):
     """
     ID / Content / Final 3-view t-SNE + 오른쪽 하단 원형 inset zoom.
@@ -359,7 +359,7 @@ def run_tsne_visualization(model_name, checkpoint_path, lines_to_draw):
         final_items = all_items
         id_items = model.item_id_embedding.weight
 
-    filename = f"tsne_{model_name}_3view_top{lines_to_draw}_anchor.png"
+    filename = f"tsne_{model_name}_3view_top{lines_to_draw}_anchor_1200.png"
     # title = f"t-SNE: {model_name}, ID vs Content vs Final (Top {lines_to_draw})"
     visualize_alignment_3views(
         id_items,
@@ -373,7 +373,7 @@ def run_tsne_visualization(model_name, checkpoint_path, lines_to_draw):
 
 if __name__ == '__main__':
     models = [
-        ("ALIGNREC_ANCHOR_1101", "saved/ALIGNREC_ANCHOR_1101_best.pth"),
+        ("ALIGNREC_ANCHOR_1101", "saved/ALIGNREC_ANCHOR_1101_baby_best.pth"),
     ]
     for model_name, ckpt_path in models:
         for k in [5000]:

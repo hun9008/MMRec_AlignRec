@@ -1,0 +1,1143 @@
+Render office:   0%|          | 0/2420 [00:00<?, ?item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   0%|          | 1/2420 [00:12<8:06:51, 12.08s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   0%|          | 3/2420 [00:16<3:07:35,  4.66s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   0%|          | 4/2420 [00:21<3:10:57,  4.74s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   0%|          | 7/2420 [00:26<1:58:32,  2.95s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   0%|          | 11/2420 [00:31<1:22:11,  2.05s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   1%|          | 19/2420 [00:38<53:26,  1.34s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   1%|          | 30/2420 [00:42<32:21,  1.23item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   1%|▏         | 34/2420 [00:47<35:37,  1.12item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   1%|▏         | 35/2420 [00:52<47:21,  1.19s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   2%|▏         | 51/2420 [00:56<23:54,  1.65item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   2%|▏         | 53/2420 [01:00<29:39,  1.33item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   3%|▎         | 84/2420 [01:04<12:46,  3.05item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   4%|▍         | 94/2420 [01:09<14:09,  2.74item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   4%|▍         | 101/2420 [01:15<18:26,  2.10item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   4%|▍         | 107/2420 [01:21<21:30,  1.79item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   4%|▍         | 108/2420 [01:25<28:03,  1.37item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   5%|▍         | 114/2420 [01:29<27:16,  1.41item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   5%|▍         | 119/2420 [01:33<27:14,  1.41item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   5%|▌         | 130/2420 [01:37<21:20,  1.79item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   5%|▌         | 131/2420 [01:41<29:02,  1.31item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   6%|▌         | 134/2420 [01:45<31:53,  1.19item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   6%|▌         | 138/2420 [01:49<33:42,  1.13item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   6%|▌         | 148/2420 [01:52<23:46,  1.59item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   6%|▌         | 151/2420 [01:57<29:36,  1.28item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   7%|▋         | 166/2420 [02:05<24:17,  1.55item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   8%|▊         | 190/2420 [02:14<18:48,  1.98item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   8%|▊         | 191/2420 [02:18<22:18,  1.67item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   9%|▊         | 209/2420 [02:22<15:39,  2.35item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   9%|▉         | 218/2420 [02:26<16:24,  2.24item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:   9%|▉         | 226/2420 [02:30<16:49,  2.17item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  10%|▉         | 232/2420 [02:34<17:52,  2.04item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  10%|▉         | 234/2420 [02:38<22:41,  1.61item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  10%|█         | 254/2420 [02:41<13:20,  2.71item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█         | 256/2420 [02:45<17:08,  2.10item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█         | 257/2420 [02:50<25:54,  1.39item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█         | 259/2420 [02:54<30:44,  1.17item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█         | 260/2420 [02:58<40:20,  1.12s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█         | 262/2420 [03:02<46:43,  1.30s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█         | 263/2420 [03:06<58:34,  1.63s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█         | 270/2420 [03:20<1:05:54,  1.84s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█▏        | 275/2420 [03:24<52:06,  1.46s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█▏        | 276/2420 [03:28<1:00:37,  1.70s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  11%|█▏        | 278/2420 [03:32<1:02:31,  1.75s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  12%|█▏        | 282/2420 [03:38<57:49,  1.62s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  12%|█▏        | 284/2420 [03:42<1:01:50,  1.74s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  12%|█▏        | 286/2420 [03:46<1:05:18,  1.84s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  12%|█▏        | 290/2420 [03:50<53:49,  1.52s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  12%|█▏        | 291/2420 [03:54<1:04:12,  1.81s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  12%|█▏        | 296/2420 [03:59<48:19,  1.37s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  13%|█▎        | 305/2420 [04:04<33:03,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  13%|█▎        | 306/2420 [04:08<41:11,  1.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  13%|█▎        | 307/2420 [04:12<50:51,  1.44s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  13%|█▎        | 322/2420 [04:15<21:57,  1.59item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  13%|█▎        | 323/2420 [04:21<32:00,  1.09item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  14%|█▎        | 328/2420 [04:25<31:03,  1.12item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  14%|█▎        | 332/2420 [04:29<32:31,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  14%|█▍        | 342/2420 [04:33<23:47,  1.46item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  14%|█▍        | 345/2420 [04:37<27:00,  1.28item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  14%|█▍        | 346/2420 [04:41<35:18,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  14%|█▍        | 348/2420 [04:45<41:20,  1.20s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▍        | 352/2420 [04:49<38:06,  1.11s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▍        | 358/2420 [04:53<31:17,  1.10item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▌        | 364/2420 [04:57<29:37,  1.16item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▌        | 369/2420 [05:01<29:08,  1.17item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▌        | 370/2420 [05:05<37:54,  1.11s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▌        | 371/2420 [05:09<47:00,  1.38s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▌        | 372/2420 [05:13<56:52,  1.67s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  15%|█▌        | 373/2420 [05:16<1:07:27,  1.98s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  16%|█▌        | 380/2420 [05:26<53:16,  1.57s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  16%|█▌        | 382/2420 [05:29<54:18,  1.60s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  16%|█▌        | 385/2420 [05:33<52:00,  1.53s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  16%|█▌        | 386/2420 [05:37<1:02:24,  1.84s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  16%|█▌        | 387/2420 [05:42<1:18:53,  2.33s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  16%|█▌        | 388/2420 [05:46<1:26:34,  2.56s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  16%|█▋        | 396/2420 [05:49<38:18,  1.14s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  17%|█▋        | 404/2420 [05:53<26:19,  1.28item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  17%|█▋        | 405/2420 [05:57<34:40,  1.03s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  18%|█▊        | 425/2420 [06:00<14:58,  2.22item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  18%|█▊        | 437/2420 [06:04<12:57,  2.55item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  18%|█▊        | 438/2420 [06:08<17:47,  1.86item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  19%|█▉        | 462/2420 [06:12<10:16,  3.17item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  20%|█▉        | 474/2420 [06:17<11:07,  2.92item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  20%|█▉        | 475/2420 [06:20<14:35,  2.22item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  20%|█▉        | 478/2420 [06:29<25:34,  1.27item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  20%|█▉        | 479/2420 [06:34<31:38,  1.02item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  20%|█▉        | 482/2420 [06:38<34:01,  1.05s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  20%|██        | 487/2420 [06:42<32:02,  1.01item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  20%|██        | 493/2420 [06:45<27:02,  1.19item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  21%|██        | 506/2420 [06:50<18:31,  1.72item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  21%|██        | 507/2420 [06:53<23:51,  1.34item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  21%|██        | 510/2420 [06:57<25:43,  1.24item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  21%|██        | 512/2420 [07:02<35:26,  1.11s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  21%|██▏       | 515/2420 [07:06<36:58,  1.16s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  21%|██▏       | 520/2420 [07:11<34:46,  1.10s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  22%|██▏       | 521/2420 [07:14<41:28,  1.31s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  22%|██▏       | 532/2420 [07:18<22:43,  1.38item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  22%|██▏       | 538/2420 [07:22<22:34,  1.39item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  22%|██▏       | 539/2420 [07:26<29:02,  1.08item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  23%|██▎       | 545/2420 [07:30<24:51,  1.26item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  23%|██▎       | 546/2420 [07:33<32:21,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  23%|██▎       | 553/2420 [07:39<28:16,  1.10item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  23%|██▎       | 557/2420 [07:43<29:03,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  23%|██▎       | 562/2420 [07:46<26:50,  1.15item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  23%|██▎       | 564/2420 [07:50<31:54,  1.03s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  24%|██▍       | 582/2420 [07:54<14:42,  2.08item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  24%|██▍       | 583/2420 [07:57<18:53,  1.62item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  25%|██▍       | 594/2420 [08:01<15:13,  2.00item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  25%|██▍       | 596/2420 [08:04<19:13,  1.58item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  25%|██▍       | 601/2420 [08:08<19:59,  1.52item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  25%|██▍       | 603/2420 [08:12<25:04,  1.21item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  25%|██▌       | 605/2420 [08:16<31:57,  1.06s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  25%|██▌       | 616/2420 [08:20<18:58,  1.58item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  26%|██▌       | 618/2420 [08:23<23:06,  1.30item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  26%|██▌       | 620/2420 [08:26<27:09,  1.10item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  26%|██▌       | 623/2420 [08:30<29:22,  1.02item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  26%|██▌       | 628/2420 [08:34<26:56,  1.11item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  26%|██▌       | 632/2420 [08:38<27:18,  1.09item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  26%|██▋       | 637/2420 [08:41<25:25,  1.17item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  27%|██▋       | 646/2420 [08:45<18:49,  1.57item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  27%|██▋       | 648/2420 [08:50<26:00,  1.14item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  27%|██▋       | 650/2420 [08:54<30:32,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  27%|██▋       | 653/2420 [08:58<32:39,  1.11s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  27%|██▋       | 660/2420 [09:01<24:24,  1.20item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  28%|██▊       | 680/2420 [09:05<11:48,  2.45item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  28%|██▊       | 688/2420 [09:08<12:10,  2.37item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  29%|██▉       | 708/2420 [09:12<08:58,  3.18item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  29%|██▉       | 709/2420 [09:16<12:20,  2.31item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  29%|██▉       | 711/2420 [09:21<16:45,  1.70item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  30%|██▉       | 717/2420 [09:24<16:25,  1.73item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  30%|███       | 731/2420 [09:29<13:04,  2.15item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  30%|███       | 735/2420 [09:32<15:00,  1.87item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  30%|███       | 736/2420 [09:38<22:18,  1.26item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  30%|███       | 737/2420 [09:42<29:08,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  30%|███       | 738/2420 [09:45<35:37,  1.27s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  31%|███       | 747/2420 [09:49<22:27,  1.24item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  31%|███       | 751/2420 [09:52<22:54,  1.21item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  31%|███▏      | 760/2420 [09:57<18:13,  1.52item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 767/2420 [10:00<16:33,  1.66item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 769/2420 [10:04<20:58,  1.31item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 774/2420 [10:09<22:42,  1.21item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 778/2420 [10:12<22:38,  1.21item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 780/2420 [10:15<25:48,  1.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 781/2420 [10:19<33:32,  1.23s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 782/2420 [10:28<58:41,  2.15s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  32%|███▏      | 784/2420 [10:31<55:44,  2.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 787/2420 [10:35<47:34,  1.75s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 788/2420 [10:38<54:43,  2.01s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 789/2420 [10:43<1:05:43,  2.42s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 791/2420 [10:48<1:05:01,  2.39s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 792/2420 [10:51<1:10:44,  2.61s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 794/2420 [10:55<1:02:29,  2.31s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 795/2420 [10:59<1:14:20,  2.74s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 797/2420 [11:03<1:04:50,  2.40s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 801/2420 [11:07<46:16,  1.71s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  33%|███▎      | 809/2420 [11:10<25:01,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  34%|███▍      | 819/2420 [11:14<17:49,  1.50item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  34%|███▍      | 832/2420 [11:18<12:50,  2.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  35%|███▍      | 840/2420 [11:22<12:40,  2.08item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  35%|███▌      | 848/2420 [11:27<13:32,  1.94item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  35%|███▌      | 849/2420 [11:30<17:19,  1.51item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  35%|███▌      | 853/2420 [11:33<18:37,  1.40item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  35%|███▌      | 855/2420 [11:37<22:49,  1.14item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  35%|███▌      | 857/2420 [11:41<26:14,  1.01s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  35%|███▌      | 859/2420 [11:44<30:37,  1.18s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  36%|███▌      | 866/2420 [11:48<22:55,  1.13item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  36%|███▌      | 870/2420 [11:52<23:27,  1.10item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  36%|███▌      | 871/2420 [11:56<29:54,  1.16s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  36%|███▌      | 872/2420 [12:02<43:17,  1.68s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  36%|███▌      | 874/2420 [12:05<44:14,  1.72s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  36%|███▋      | 881/2420 [12:09<26:30,  1.03s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  36%|███▋      | 882/2420 [12:12<33:52,  1.32s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  37%|███▋      | 893/2420 [12:16<17:24,  1.46item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  37%|███▋      | 898/2420 [12:19<17:26,  1.45item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  37%|███▋      | 907/2420 [12:23<14:29,  1.74item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  38%|███▊      | 908/2420 [12:27<20:12,  1.25item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  38%|███▊      | 909/2420 [12:31<26:18,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  38%|███▊      | 918/2420 [12:35<18:33,  1.35item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  38%|███▊      | 924/2420 [12:40<19:16,  1.29item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  38%|███▊      | 928/2420 [12:44<20:32,  1.21item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  39%|███▊      | 935/2420 [12:48<18:19,  1.35item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  39%|███▊      | 936/2420 [12:52<23:21,  1.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  39%|███▊      | 937/2420 [12:55<29:44,  1.20s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  39%|███▉      | 941/2420 [12:59<27:09,  1.10s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  39%|███▉      | 946/2420 [13:03<23:28,  1.05item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  39%|███▉      | 948/2420 [13:06<27:00,  1.10s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  39%|███▉      | 955/2420 [13:10<21:00,  1.16item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  40%|███▉      | 966/2420 [13:15<15:31,  1.56item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  40%|███▉      | 967/2420 [13:19<20:43,  1.17item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  40%|████      | 969/2420 [13:23<24:40,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  41%|████      | 981/2420 [13:27<14:35,  1.64item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  41%|████      | 982/2420 [13:34<24:12,  1.01s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  41%|████      | 992/2420 [13:37<16:43,  1.42item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  41%|████▏     | 1001/2420 [13:41<13:58,  1.69item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1009/2420 [13:44<12:36,  1.87item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1012/2420 [13:48<15:06,  1.55item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1016/2420 [13:52<16:46,  1.40item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1018/2420 [13:57<22:21,  1.05item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1019/2420 [14:01<28:01,  1.20s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1020/2420 [14:04<34:49,  1.49s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1024/2420 [14:08<29:05,  1.25s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  42%|████▏     | 1025/2420 [14:11<34:49,  1.50s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  43%|████▎     | 1030/2420 [14:15<26:09,  1.13s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  43%|████▎     | 1031/2420 [14:18<32:28,  1.40s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  43%|████▎     | 1032/2420 [14:22<40:25,  1.75s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  43%|████▎     | 1041/2420 [14:26<21:18,  1.08item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  43%|████▎     | 1050/2420 [14:32<17:40,  1.29item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  43%|████▎     | 1051/2420 [14:40<29:58,  1.31s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  44%|████▍     | 1065/2420 [14:44<15:43,  1.44item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  44%|████▍     | 1067/2420 [14:48<18:44,  1.20item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  44%|████▍     | 1068/2420 [14:51<22:53,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  44%|████▍     | 1074/2420 [14:55<19:07,  1.17item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  44%|████▍     | 1075/2420 [14:58<23:23,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  44%|████▍     | 1076/2420 [15:02<30:48,  1.38s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  45%|████▍     | 1077/2420 [15:06<37:17,  1.67s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  45%|████▍     | 1079/2420 [15:14<51:01,  2.28s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  45%|████▍     | 1087/2420 [15:18<27:50,  1.25s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  45%|████▌     | 1089/2420 [15:22<29:56,  1.35s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  45%|████▌     | 1093/2420 [15:25<25:43,  1.16s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  45%|████▌     | 1094/2420 [15:28<30:55,  1.40s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  45%|████▌     | 1098/2420 [15:32<25:39,  1.16s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  46%|████▌     | 1104/2420 [15:42<30:55,  1.41s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  46%|████▌     | 1105/2420 [15:46<36:06,  1.65s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  46%|████▌     | 1109/2420 [15:49<29:34,  1.35s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  46%|████▌     | 1117/2420 [15:52<19:23,  1.12item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  46%|████▌     | 1118/2420 [15:56<24:20,  1.12s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  46%|████▌     | 1119/2420 [16:00<31:41,  1.46s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  47%|████▋     | 1133/2420 [16:04<13:59,  1.53item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  47%|████▋     | 1139/2420 [16:07<13:10,  1.62item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  47%|████▋     | 1142/2420 [16:11<15:41,  1.36item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  48%|████▊     | 1152/2420 [16:15<12:17,  1.72item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  48%|████▊     | 1156/2420 [16:19<13:53,  1.52item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  48%|████▊     | 1161/2420 [16:23<14:00,  1.50item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  48%|████▊     | 1167/2420 [16:26<13:43,  1.52item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  48%|████▊     | 1169/2420 [16:31<18:07,  1.15item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  48%|████▊     | 1172/2420 [16:35<19:42,  1.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  49%|████▊     | 1174/2420 [16:40<25:14,  1.22s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  49%|████▊     | 1178/2420 [16:43<22:23,  1.08s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  49%|████▉     | 1183/2420 [16:46<19:24,  1.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  49%|████▉     | 1185/2420 [16:51<24:08,  1.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  49%|████▉     | 1191/2420 [16:55<19:14,  1.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  49%|████▉     | 1193/2420 [16:58<21:31,  1.05s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  49%|████▉     | 1195/2420 [17:01<23:23,  1.15s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  50%|████▉     | 1198/2420 [17:06<26:27,  1.30s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  50%|█████     | 1214/2420 [17:10<11:12,  1.79item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  50%|█████     | 1216/2420 [17:15<16:12,  1.24item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  50%|█████     | 1218/2420 [17:19<18:45,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  50%|█████     | 1222/2420 [17:22<18:30,  1.08item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  51%|█████     | 1227/2420 [17:26<16:48,  1.18item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  51%|█████     | 1230/2420 [17:30<19:03,  1.04item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  51%|█████     | 1231/2420 [17:33<23:34,  1.19s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  51%|█████     | 1236/2420 [17:44<31:27,  1.59s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  51%|█████     | 1239/2420 [17:48<29:27,  1.50s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  51%|█████▏    | 1243/2420 [17:53<27:46,  1.42s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  52%|█████▏    | 1247/2420 [17:56<24:20,  1.25s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  52%|█████▏    | 1248/2420 [18:01<30:52,  1.58s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  52%|█████▏    | 1255/2420 [18:04<20:11,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  52%|█████▏    | 1258/2420 [18:09<22:05,  1.14s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  52%|█████▏    | 1260/2420 [18:12<23:51,  1.23s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1271/2420 [18:16<13:56,  1.37item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1277/2420 [18:22<15:08,  1.26item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1278/2420 [18:26<19:26,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1280/2420 [18:30<21:53,  1.15s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1282/2420 [18:33<23:48,  1.26s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1283/2420 [18:37<29:48,  1.57s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1287/2420 [18:43<28:29,  1.51s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1293/2420 [18:46<20:22,  1.09s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  53%|█████▎    | 1294/2420 [18:50<26:20,  1.40s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▎    | 1299/2420 [18:54<21:24,  1.15s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▍    | 1301/2420 [18:58<24:27,  1.31s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▍    | 1302/2420 [19:02<29:22,  1.58s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▍    | 1303/2420 [19:06<36:37,  1.97s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▍    | 1304/2420 [19:10<43:00,  2.31s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▍    | 1309/2420 [19:14<27:51,  1.50s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▍    | 1313/2420 [19:19<26:04,  1.41s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  54%|█████▍    | 1317/2420 [19:23<23:04,  1.26s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  55%|█████▍    | 1320/2420 [19:33<33:35,  1.83s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  55%|█████▍    | 1321/2420 [19:37<37:39,  2.06s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  55%|█████▍    | 1323/2420 [19:46<48:24,  2.65s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  55%|█████▍    | 1324/2420 [19:50<52:56,  2.90s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  55%|█████▍    | 1326/2420 [19:54<47:09,  2.59s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  55%|█████▍    | 1330/2420 [19:58<33:30,  1.84s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  55%|█████▌    | 1342/2420 [20:02<14:58,  1.20item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  56%|█████▌    | 1347/2420 [20:06<15:00,  1.19item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  56%|█████▌    | 1351/2420 [20:11<16:41,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  56%|█████▌    | 1356/2420 [20:14<15:17,  1.16item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  56%|█████▌    | 1360/2420 [20:18<15:23,  1.15item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  56%|█████▋    | 1363/2420 [20:22<17:14,  1.02item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  56%|█████▋    | 1365/2420 [20:26<20:33,  1.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  57%|█████▋    | 1374/2420 [20:30<13:43,  1.27item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  57%|█████▋    | 1375/2420 [20:34<17:47,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  57%|█████▋    | 1380/2420 [20:38<16:12,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  57%|█████▋    | 1383/2420 [20:42<17:12,  1.00item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  57%|█████▋    | 1386/2420 [20:50<24:22,  1.41s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  57%|█████▋    | 1388/2420 [20:55<27:57,  1.63s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  57%|█████▋    | 1391/2420 [20:59<26:19,  1.53s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  58%|█████▊    | 1394/2420 [21:04<26:58,  1.58s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  58%|█████▊    | 1397/2420 [21:07<24:42,  1.45s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  58%|█████▊    | 1401/2420 [21:11<21:22,  1.26s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  58%|█████▊    | 1406/2420 [21:14<17:41,  1.05s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  58%|█████▊    | 1414/2420 [21:18<12:31,  1.34item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  58%|█████▊    | 1415/2420 [21:22<16:54,  1.01s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  59%|█████▉    | 1422/2420 [21:26<14:19,  1.16item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  59%|█████▉    | 1426/2420 [21:31<15:29,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  59%|█████▉    | 1429/2420 [21:35<16:49,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  59%|█████▉    | 1434/2420 [21:39<15:06,  1.09item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  59%|█████▉    | 1438/2420 [21:43<16:11,  1.01item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|█████▉    | 1441/2420 [21:47<16:56,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|█████▉    | 1445/2420 [21:51<16:41,  1.03s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|█████▉    | 1446/2420 [21:54<20:33,  1.27s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|█████▉    | 1447/2420 [21:58<25:37,  1.58s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|█████▉    | 1450/2420 [22:02<24:21,  1.51s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|██████    | 1456/2420 [22:07<17:55,  1.12s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|██████    | 1457/2420 [22:12<24:39,  1.54s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|██████    | 1459/2420 [22:15<24:53,  1.55s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|██████    | 1461/2420 [22:19<26:35,  1.66s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  60%|██████    | 1464/2420 [22:23<25:02,  1.57s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  61%|██████    | 1465/2420 [22:27<30:04,  1.89s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  61%|██████    | 1467/2420 [22:31<30:05,  1.89s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  61%|██████    | 1471/2420 [22:35<23:52,  1.51s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  61%|██████    | 1476/2420 [22:39<19:22,  1.23s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  61%|██████    | 1477/2420 [22:43<23:16,  1.48s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  61%|██████▏   | 1486/2420 [22:48<14:36,  1.07item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1490/2420 [22:52<14:59,  1.03item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1492/2420 [22:55<16:54,  1.09s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1493/2420 [22:59<21:15,  1.38s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1494/2420 [23:04<27:37,  1.79s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1496/2420 [23:07<26:52,  1.74s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1502/2420 [23:11<18:21,  1.20s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1507/2420 [23:17<17:11,  1.13s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1508/2420 [23:20<20:26,  1.35s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1511/2420 [23:24<20:27,  1.35s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  62%|██████▏   | 1512/2420 [23:29<26:39,  1.76s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1513/2420 [23:32<30:59,  2.05s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1515/2420 [23:36<30:09,  2.00s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1516/2420 [23:40<34:34,  2.29s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1517/2420 [23:51<1:03:23,  4.21s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1518/2420 [23:55<1:02:11,  4.14s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1521/2420 [23:59<40:00,  2.67s/item]  figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1527/2420 [24:03<22:07,  1.49s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1528/2420 [24:07<27:20,  1.84s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1534/2420 [24:11<17:50,  1.21s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1535/2420 [24:15<23:10,  1.57s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  63%|██████▎   | 1536/2420 [24:19<27:00,  1.83s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  64%|██████▎   | 1541/2420 [24:23<19:23,  1.32s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  64%|██████▍   | 1545/2420 [24:27<17:51,  1.22s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  64%|██████▍   | 1549/2420 [24:30<16:16,  1.12s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  64%|██████▍   | 1556/2420 [24:34<12:06,  1.19item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  64%|██████▍   | 1558/2420 [24:38<14:57,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  64%|██████▍   | 1560/2420 [24:42<17:39,  1.23s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  65%|██████▍   | 1565/2420 [24:47<15:16,  1.07s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  65%|██████▌   | 1575/2420 [24:51<10:29,  1.34item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  65%|██████▌   | 1578/2420 [24:55<11:34,  1.21item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  66%|██████▌   | 1590/2420 [24:58<07:32,  1.83item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  66%|██████▌   | 1591/2420 [25:02<09:56,  1.39item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  66%|██████▌   | 1596/2420 [25:05<09:43,  1.41item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  66%|██████▌   | 1600/2420 [25:09<10:26,  1.31item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  66%|██████▌   | 1601/2420 [25:13<13:57,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  66%|██████▌   | 1602/2420 [25:16<17:38,  1.29s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  66%|██████▋   | 1607/2420 [25:20<14:03,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  67%|██████▋   | 1610/2420 [25:23<14:22,  1.06s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  67%|██████▋   | 1623/2420 [25:29<08:43,  1.52item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  67%|██████▋   | 1626/2420 [25:32<09:50,  1.34item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  67%|██████▋   | 1627/2420 [25:36<12:38,  1.05item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  67%|██████▋   | 1628/2420 [25:39<16:03,  1.22s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  67%|██████▋   | 1632/2420 [25:43<14:16,  1.09s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  67%|██████▋   | 1633/2420 [25:46<17:46,  1.36s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  68%|██████▊   | 1634/2420 [25:50<22:16,  1.70s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  68%|██████▊   | 1637/2420 [25:54<20:08,  1.54s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  68%|██████▊   | 1638/2420 [25:57<24:02,  1.84s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  68%|██████▊   | 1647/2420 [26:02<12:52,  1.00item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  68%|██████▊   | 1651/2420 [26:06<12:32,  1.02item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  68%|██████▊   | 1655/2420 [26:10<12:11,  1.05item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  69%|██████▊   | 1660/2420 [26:14<11:24,  1.11item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  69%|██████▉   | 1665/2420 [26:18<10:58,  1.15item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  69%|██████▉   | 1666/2420 [26:22<14:26,  1.15s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  69%|██████▉   | 1667/2420 [26:25<17:26,  1.39s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  69%|██████▉   | 1671/2420 [26:29<15:06,  1.21s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  69%|██████▉   | 1676/2420 [26:33<12:40,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  69%|██████▉   | 1677/2420 [26:37<17:02,  1.38s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|██████▉   | 1683/2420 [26:43<14:59,  1.22s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|██████▉   | 1685/2420 [26:48<17:05,  1.40s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|██████▉   | 1687/2420 [26:51<18:08,  1.48s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|██████▉   | 1693/2420 [27:00<17:32,  1.45s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|███████   | 1697/2420 [27:03<15:27,  1.28s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|███████   | 1698/2420 [27:07<18:29,  1.54s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|███████   | 1700/2420 [27:12<20:22,  1.70s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|███████   | 1702/2420 [27:15<20:21,  1.70s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  70%|███████   | 1705/2420 [27:19<18:00,  1.51s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  71%|███████   | 1708/2420 [27:22<16:54,  1.42s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  71%|███████   | 1710/2420 [27:27<19:12,  1.62s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  71%|███████   | 1715/2420 [27:30<14:08,  1.20s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  71%|███████▏  | 1726/2420 [27:34<08:01,  1.44item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1733/2420 [27:38<07:05,  1.61item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1735/2420 [27:41<08:39,  1.32item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1742/2420 [27:44<07:21,  1.53item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1744/2420 [27:48<08:49,  1.28item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1745/2420 [27:51<11:40,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1746/2420 [27:55<14:37,  1.30s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1748/2420 [27:59<16:44,  1.49s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1750/2420 [28:05<21:21,  1.91s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  72%|███████▏  | 1752/2420 [28:08<20:19,  1.82s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1757/2420 [28:13<14:53,  1.35s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1759/2420 [28:16<15:24,  1.40s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1760/2420 [28:20<18:57,  1.72s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1763/2420 [28:23<16:23,  1.50s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1767/2420 [28:26<13:39,  1.25s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1768/2420 [28:30<16:51,  1.55s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1769/2420 [28:34<20:14,  1.87s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  73%|███████▎  | 1770/2420 [28:38<25:22,  2.34s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▎  | 1782/2420 [28:42<08:26,  1.26item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▎  | 1783/2420 [28:46<11:08,  1.05s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▎  | 1784/2420 [28:50<14:29,  1.37s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▍  | 1785/2420 [28:53<17:35,  1.66s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▍  | 1794/2420 [28:57<09:10,  1.14item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▍  | 1795/2420 [29:00<11:31,  1.11s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▍  | 1796/2420 [29:03<13:56,  1.34s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▍  | 1798/2420 [29:07<15:26,  1.49s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  74%|███████▍  | 1799/2420 [29:11<18:22,  1.77s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▍  | 1803/2420 [29:15<15:10,  1.47s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▍  | 1804/2420 [29:19<18:42,  1.82s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▍  | 1807/2420 [29:23<16:25,  1.61s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▍  | 1808/2420 [29:26<18:52,  1.85s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▌  | 1818/2420 [29:29<07:55,  1.27item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▌  | 1820/2420 [29:33<09:27,  1.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▌  | 1821/2420 [29:36<12:23,  1.24s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  75%|███████▌  | 1827/2420 [29:41<09:58,  1.01s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▌  | 1829/2420 [29:45<11:49,  1.20s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▌  | 1839/2420 [29:49<07:20,  1.32item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▌  | 1841/2420 [29:54<09:35,  1.01item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▌  | 1842/2420 [30:09<21:17,  2.21s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▌  | 1844/2420 [30:15<23:03,  2.40s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▋  | 1847/2420 [30:20<20:42,  2.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▋  | 1848/2420 [30:23<22:28,  2.36s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▋  | 1849/2420 [30:34<34:27,  3.62s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  76%|███████▋  | 1850/2420 [30:38<34:29,  3.63s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1852/2420 [30:41<28:12,  2.98s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1857/2420 [30:45<16:25,  1.75s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1858/2420 [30:50<20:19,  2.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1861/2420 [30:53<16:43,  1.80s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1862/2420 [30:56<18:42,  2.01s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1863/2420 [31:00<21:40,  2.33s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1864/2420 [31:07<29:23,  3.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1867/2420 [31:10<21:02,  2.28s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1868/2420 [31:14<23:50,  2.59s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1870/2420 [31:19<22:25,  2.45s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  77%|███████▋  | 1873/2420 [31:22<17:08,  1.88s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  78%|███████▊  | 1881/2420 [31:25<08:46,  1.02item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  78%|███████▊  | 1888/2420 [31:29<07:08,  1.24item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  78%|███████▊  | 1893/2420 [31:33<06:41,  1.31item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  78%|███████▊  | 1896/2420 [31:36<07:25,  1.18item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▊  | 1900/2420 [31:40<07:33,  1.15item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▊  | 1905/2420 [31:43<06:49,  1.26item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▉  | 1906/2420 [31:47<08:49,  1.03s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▉  | 1907/2420 [31:50<10:56,  1.28s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▉  | 1908/2420 [31:54<13:32,  1.59s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▉  | 1914/2420 [31:58<09:26,  1.12s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▉  | 1920/2420 [32:01<07:22,  1.13item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  79%|███████▉  | 1921/2420 [32:06<10:30,  1.26s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  80%|███████▉  | 1924/2420 [32:10<10:06,  1.22s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  80%|████████  | 1938/2420 [32:13<04:43,  1.70item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  80%|████████  | 1940/2420 [32:17<06:04,  1.32item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  80%|████████  | 1945/2420 [32:22<06:16,  1.26item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  81%|████████  | 1950/2420 [32:25<05:58,  1.31item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  81%|████████  | 1951/2420 [32:29<07:34,  1.03item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  81%|████████  | 1957/2420 [32:38<09:11,  1.19s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  81%|████████  | 1958/2420 [32:42<11:02,  1.43s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  81%|████████  | 1961/2420 [32:47<11:32,  1.51s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  81%|████████▏ | 1971/2420 [32:51<06:34,  1.14item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  82%|████████▏ | 1983/2420 [32:54<04:10,  1.74item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  82%|████████▏ | 1993/2420 [32:57<03:24,  2.09item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  83%|████████▎ | 1997/2420 [33:00<03:51,  1.83item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  83%|████████▎ | 2000/2420 [33:04<04:34,  1.53item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  83%|████████▎ | 2002/2420 [33:07<05:29,  1.27item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  83%|████████▎ | 2004/2420 [33:11<06:30,  1.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  84%|████████▎ | 2022/2420 [33:16<03:13,  2.06item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  84%|████████▎ | 2024/2420 [33:19<04:03,  1.62item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  84%|████████▍ | 2034/2420 [33:25<03:43,  1.72item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  84%|████████▍ | 2040/2420 [33:29<03:46,  1.68item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  84%|████████▍ | 2043/2420 [33:32<04:25,  1.42item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  84%|████████▍ | 2044/2420 [33:36<05:38,  1.11item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▍ | 2045/2420 [33:40<07:15,  1.16s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▍ | 2046/2420 [33:43<08:47,  1.41s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▍ | 2047/2420 [33:47<11:07,  1.79s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▍ | 2050/2420 [33:51<09:33,  1.55s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▍ | 2052/2420 [33:54<09:53,  1.61s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▍ | 2056/2420 [33:58<08:03,  1.33s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▌ | 2061/2420 [34:03<06:58,  1.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  85%|████████▌ | 2066/2420 [34:07<06:01,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  86%|████████▌ | 2070/2420 [34:10<05:33,  1.05item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  86%|████████▌ | 2072/2420 [34:14<06:30,  1.12s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  86%|████████▌ | 2077/2420 [34:17<05:30,  1.04item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  86%|████████▌ | 2078/2420 [34:21<06:56,  1.22s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  86%|████████▌ | 2079/2420 [34:24<08:34,  1.51s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  87%|████████▋ | 2097/2420 [34:28<02:46,  1.95item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  87%|████████▋ | 2107/2420 [34:32<02:30,  2.08item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  87%|████████▋ | 2109/2420 [34:38<03:36,  1.43item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  87%|████████▋ | 2111/2420 [34:42<04:22,  1.18item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  87%|████████▋ | 2112/2420 [34:46<05:48,  1.13s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  87%|████████▋ | 2113/2420 [34:49<06:51,  1.34s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  87%|████████▋ | 2115/2420 [34:53<07:20,  1.45s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  88%|████████▊ | 2124/2420 [34:56<03:58,  1.24item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  88%|████████▊ | 2134/2420 [35:01<03:03,  1.56item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  88%|████████▊ | 2138/2420 [35:04<03:18,  1.42item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  88%|████████▊ | 2139/2420 [35:08<04:11,  1.12item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  89%|████████▉ | 2148/2420 [35:11<02:55,  1.55item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  89%|████████▉ | 2149/2420 [35:17<04:35,  1.02s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  89%|████████▉ | 2150/2420 [35:21<05:58,  1.33s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  89%|████████▉ | 2151/2420 [35:25<07:12,  1.61s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  89%|████████▉ | 2159/2420 [35:29<04:17,  1.01item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  89%|████████▉ | 2160/2420 [35:33<05:18,  1.23s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  89%|████████▉ | 2165/2420 [35:37<04:25,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  90%|████████▉ | 2166/2420 [35:40<05:22,  1.27s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  90%|████████▉ | 2169/2420 [35:45<05:36,  1.34s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  90%|████████▉ | 2175/2420 [35:48<04:01,  1.02item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  90%|████████▉ | 2177/2420 [35:52<04:38,  1.14s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  90%|█████████ | 2178/2420 [35:57<06:25,  1.59s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  90%|█████████ | 2179/2420 [36:01<07:56,  1.98s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  90%|█████████ | 2182/2420 [36:05<06:38,  1.67s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  91%|█████████ | 2197/2420 [36:10<02:35,  1.44item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  91%|█████████ | 2199/2420 [36:13<03:07,  1.18item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  91%|█████████ | 2200/2420 [36:17<03:55,  1.07s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  91%|█████████ | 2203/2420 [36:20<03:55,  1.08s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  91%|█████████ | 2206/2420 [36:24<03:58,  1.11s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2217/2420 [36:27<02:10,  1.55item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2218/2420 [36:33<03:16,  1.03item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2220/2420 [36:37<03:46,  1.13s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2221/2420 [36:40<04:34,  1.38s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2226/2420 [36:44<03:34,  1.11s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2230/2420 [36:48<03:22,  1.07s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2232/2420 [36:51<03:40,  1.17s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  92%|█████████▏| 2233/2420 [36:55<04:35,  1.47s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  93%|█████████▎| 2240/2420 [36:59<02:59,  1.00item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  93%|█████████▎| 2245/2420 [37:02<02:36,  1.12item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  93%|█████████▎| 2246/2420 [37:07<03:30,  1.21s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  93%|█████████▎| 2250/2420 [37:12<03:37,  1.28s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  93%|█████████▎| 2251/2420 [37:17<04:32,  1.61s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  93%|█████████▎| 2260/2420 [37:20<02:18,  1.16item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  93%|█████████▎| 2261/2420 [37:24<02:57,  1.12s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▎| 2265/2420 [37:27<02:39,  1.03s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2271/2420 [37:31<02:09,  1.15item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2277/2420 [37:34<01:49,  1.31item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2278/2420 [37:38<02:27,  1.04s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2279/2420 [37:42<03:06,  1.32s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2280/2420 [37:46<03:43,  1.60s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2281/2420 [37:50<04:42,  2.03s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2283/2420 [37:54<04:31,  1.98s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2284/2420 [37:58<05:15,  2.32s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2285/2420 [38:01<05:36,  2.49s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  94%|█████████▍| 2286/2420 [38:04<05:54,  2.65s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  95%|█████████▍| 2289/2420 [38:07<04:09,  1.90s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  95%|█████████▍| 2290/2420 [38:11<04:57,  2.29s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  95%|█████████▍| 2292/2420 [38:15<04:34,  2.14s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  95%|█████████▍| 2293/2420 [38:18<05:02,  2.38s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  95%|█████████▍| 2296/2420 [38:22<03:42,  1.79s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  95%|█████████▍| 2297/2420 [38:26<04:36,  2.25s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  95%|█████████▌| 2301/2420 [38:30<03:04,  1.55s/item]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  96%|█████████▌| 2312/2420 [38:33<01:19,  1.35item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  96%|█████████▌| 2318/2420 [38:37<01:10,  1.45item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  96%|█████████▌| 2323/2420 [38:41<01:09,  1.39item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  97%|█████████▋| 2341/2420 [38:44<00:32,  2.45item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  97%|█████████▋| 2344/2420 [38:48<00:38,  1.96item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  97%|█████████▋| 2350/2420 [38:52<00:37,  1.86item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  97%|█████████▋| 2351/2420 [38:55<00:50,  1.37item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  98%|█████████▊| 2363/2420 [39:01<00:33,  1.71item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  99%|█████████▊| 2384/2420 [39:05<00:13,  2.61item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  99%|█████████▊| 2387/2420 [39:10<00:16,  2.05item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  99%|█████████▉| 2397/2420 [39:13<00:10,  2.30item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office:  99%|█████████▉| 2407/2420 [39:16<00:05,  2.50item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office: 100%|█████████▉| 2414/2420 [39:20<00:02,  2.23item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office: 100%|█████████▉| 2415/2420 [39:24<00:02,  1.69item/s]figure_3_0205.py:531: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Render office: 100%|█████████▉| 2416/2420 [39:27<00:03,  1.29item/s]Render office: 100%|██████████| 2420/2420 [39:27<00:00,  1.02item/s]

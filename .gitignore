@@ -151,8 +151,18 @@ data/baby/typographic_feat.npy
 data/baby/v_prime_feat.npy
 data/baby/t_prime_feat.npy
 
-
 saved/*
 cache_images/*
 ijkl_overlap_alignrec/result.csv
 ijkl_overlap_1104/result.csv
+images/*
+imgaes_after/*
+# datasets
+/data/
+*.json
+
+RQ3/*
+log_after
+images_after
+log
+hyper

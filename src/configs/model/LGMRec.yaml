@@ -8,14 +8,14 @@ n_mm_layers: [2]
 #baby
 n_hyper_layer: [1]
 hyper_num: [4]
-keep_rate: [0.5]
-alpha: [0.3]
+# keep_rate: [0.3, 0.5]
+# alpha: [0.3, 0.5]
 
 # #sports
 # n_hyper_layer: [1]
 # hyper_num: [4]
-# keep_rate: [0.4]
-# alpha: [0.6]s
+keep_rate: [0.4]
+alpha: [0.6]
 
 # #clothing
 # n_hyper_layer: [2]
