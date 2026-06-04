@@ -1,0 +1,3 @@
+model | text top1 | text top2 | text top3 | vision top1 | vision top2 | vision top3
+SMORE | 0.713324 | 0.665849 | 0.633205 | 0.498026 | 0.449695 | 0.423433
+AnchorRec | 0.683512 | 0.650031 | 0.628232 | 0.418326 | 0.393236 | 0.381007

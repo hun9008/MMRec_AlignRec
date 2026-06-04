@@ -1,0 +1,97 @@
+rule	AlignRec text	AnchorRec text	text diff	AlignRec vision	AnchorRec vision	vision diff
+metric=text mean/vision mean; rows=same-items: vision diff top N:50; agg=mean	0.342004	0.722560	0.380556	0.261363	0.573908	0.312545
+metric=text mean/vision mean; rows=same-items: vision diff top N:100; agg=mean	0.331184	0.716142	0.384958	0.258567	0.533450	0.274883
+metric=text mean/vision mean; rows=same-items: vision diff top N:200; agg=mean	0.334767	0.706983	0.372216	0.259781	0.497238	0.237457
+metric=text mean/vision mean; rows=same-items: both text+vision diff top N:50; agg=mean	0.256658	0.846067	0.589410	0.295110	0.522456	0.227346
+metric=text mean/vision mean; rows=same-items: both text+vision diff top N:100; agg=mean	0.258409	0.820711	0.562302	0.285082	0.487945	0.202863
+metric=text mean/vision mean; rows=same-items: vision diff top N:500; agg=mean	0.353526	0.686871	0.333345	0.282397	0.468354	0.185957
+metric=text mean/vision mean; rows=same-items: both text+vision diff top N:200; agg=mean	0.268259	0.795723	0.527464	0.278548	0.458554	0.180006
+metric=text mean/vision mean; rows=same-items: vision diff top N:1000; agg=mean	0.371948	0.672094	0.300146	0.300517	0.442548	0.142031
+metric=text mean/vision mean; rows=same-items: AlignRec vision mean bottom N:50; agg=mean	0.279495	0.579162	0.299668	0.113590	0.252526	0.138937
+metric=text mean/vision mean; rows=same-items: both text+vision diff top N:500; agg=mean	0.286505	0.764056	0.477551	0.291871	0.428016	0.136145
+metric=text mean/vision mean; rows=same-items: AlignRec vision mean bottom N:100; agg=mean	0.293194	0.586511	0.293316	0.127976	0.258559	0.130583
+metric=text mean/vision mean; rows=same-items: AlignRec vision mean bottom N:200; agg=mean	0.287412	0.560233	0.272821	0.145003	0.254436	0.109432
+metric=text mean/vision mean; rows=same-items: both text+vision diff top N:1000; agg=mean	0.310136	0.737305	0.427169	0.310070	0.409683	0.099613
+metric=text mean/vision mean; rows=same-items: AlignRec vision mean bottom N:500; agg=mean	0.297716	0.572162	0.274446	0.176781	0.270280	0.093500
+metric=text mean/vision mean; rows=same-items: vision diff top N:2000; agg=mean	0.393951	0.660850	0.266899	0.326984	0.419409	0.092425
+metric=text mean/vision mean; rows=same-items: AlignRec vision mean bottom N:1000; agg=mean	0.317415	0.582334	0.264919	0.210100	0.287622	0.077522
+metric=text mean/vision mean; rows=same-items: vision diff top N:3000; agg=mean	0.418133	0.661953	0.243820	0.358101	0.416831	0.058730
+metric=text mean/vision mean; rows=same-items: both text+vision diff top N:2000; agg=mean	0.342011	0.710169	0.368158	0.341182	0.398671	0.057489
+metric=text mean/vision mean; rows=same-items: AlignRec vision mean bottom N:2000; agg=mean	0.340899	0.591495	0.250596	0.258301	0.304174	0.045873
+metric=text mean/vision mean; rows=same-items: both text+vision diff top N:3000; agg=mean	0.367484	0.695049	0.327566	0.368941	0.396537	0.027596
+metric=text mean/vision mean; rows=same-items: AlignRec vision mean bottom N:3000; agg=mean	0.360132	0.605426	0.245294	0.298844	0.321471	0.022627
+metric=top1 text sim/top3 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.205716	0.412791	0.207075	0.160966	0.178401	0.017435
+metric=top2 text sim/top3 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.183160	0.371002	0.187841	0.160966	0.178401	0.017435
+metric=top3 text sim/top3 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.177662	0.349718	0.172056	0.160966	0.178401	0.017435
+metric=top1 text sim/top3 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.183349	0.365673	0.182324	0.144039	0.161257	0.017218
+metric=top2 text sim/top3 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.160941	0.325761	0.164820	0.144039	0.161257	0.017218
+metric=top3 text sim/top3 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.157784	0.308162	0.150378	0.144039	0.161257	0.017218
+metric=top1 text sim/top3 vision sim; rows=bottom_n:2000; agg=mean; selected separately per model/modality	0.233734	0.461764	0.228030	0.182715	0.199625	0.016910
+metric=top2 text sim/top3 vision sim; rows=bottom_n:2000; agg=mean; selected separately per model/modality	0.209883	0.421553	0.211669	0.182715	0.199625	0.016910
+metric=top3 text sim/top3 vision sim; rows=bottom_n:2000; agg=mean; selected separately per model/modality	0.201263	0.397437	0.196174	0.182715	0.199625	0.016910
+metric=top1 text sim/top3 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.163651	0.321092	0.157441	0.130282	0.146346	0.016064
+metric=top2 text sim/top3 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.141003	0.285215	0.144212	0.130282	0.146346	0.016064
+metric=top3 text sim/top3 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.139338	0.271705	0.132367	0.130282	0.146346	0.016064
+metric=top1 text sim/top2 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.163651	0.321092	0.157441	0.134777	0.150538	0.015761
+metric=top2 text sim/top2 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.141003	0.285215	0.144212	0.134777	0.150538	0.015761
+metric=top3 text sim/top2 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.139338	0.271705	0.132367	0.134777	0.150538	0.015761
+metric=top1 text sim/top2 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.146365	0.281077	0.134712	0.122297	0.137649	0.015351
+metric=top2 text sim/top2 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.123173	0.251522	0.128350	0.122297	0.137649	0.015351
+metric=top3 text sim/top2 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.122955	0.241444	0.118490	0.122297	0.137649	0.015351
+metric=top1 text sim/top2 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.183349	0.365673	0.182324	0.150473	0.165567	0.015094
+metric=top2 text sim/top2 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.160941	0.325761	0.164820	0.150473	0.165567	0.015094
+metric=top3 text sim/top2 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.157784	0.308162	0.150378	0.150473	0.165567	0.015094
+metric=top1 text sim/top3 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.146365	0.281077	0.134712	0.119139	0.134068	0.014929
+metric=top2 text sim/top3 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.123173	0.251522	0.128350	0.119139	0.134068	0.014929
+metric=top3 text sim/top3 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.122955	0.241444	0.118490	0.119139	0.134068	0.014929
+metric=top1 text sim/top2 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.205716	0.412791	0.207075	0.169220	0.183316	0.014096
+metric=top2 text sim/top2 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.183160	0.371002	0.187841	0.169220	0.183316	0.014096
+metric=top3 text sim/top2 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.177662	0.349718	0.172056	0.169220	0.183316	0.014096
+metric=text mean/vision mean; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.111031	0.190671	0.079640	0.113590	0.126975	0.013385
+metric=top3 text sim/top2 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.034517	0.122278	0.087761	0.070140	0.083421	0.013281
+metric=top2 text sim/top2 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.041725	0.105977	0.064253	0.070140	0.083421	0.013281
+metric=top1 text sim/top2 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.062784	0.116055	0.053271	0.070140	0.083421	0.013281
+metric=top3 text sim/top3 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.058169	0.150593	0.092424	0.080679	0.093838	0.013160
+metric=top2 text sim/top3 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.058730	0.138275	0.079545	0.080679	0.093838	0.013160
+metric=top1 text sim/top3 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.083145	0.153408	0.070263	0.080679	0.093838	0.013160
+metric=top3 text sim/top2 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.083752	0.183044	0.099292	0.097720	0.110800	0.013080
+metric=top2 text sim/top2 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.082174	0.180998	0.098824	0.097720	0.110800	0.013080
+metric=top1 text sim/top2 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.108334	0.198398	0.090064	0.097720	0.110800	0.013080
+metric=top3 text sim/top3 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.083752	0.183044	0.099292	0.095791	0.108868	0.013077
+metric=top2 text sim/top3 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.082174	0.180998	0.098824	0.095791	0.108868	0.013077
+metric=top1 text sim/top3 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.108334	0.198398	0.090064	0.095791	0.108868	0.013077
+metric=top3 text sim/top3 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.034517	0.122278	0.087761	0.068959	0.081906	0.012947
+metric=top2 text sim/top3 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.041725	0.105977	0.064253	0.068959	0.081906	0.012947
+metric=top1 text sim/top3 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.062784	0.116055	0.053271	0.068959	0.081906	0.012947
+metric=top3 text sim/top2 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.058169	0.150593	0.092424	0.083087	0.095777	0.012690
+metric=top2 text sim/top2 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.058730	0.138275	0.079545	0.083087	0.095777	0.012690
+metric=top1 text sim/top2 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.083145	0.153408	0.070263	0.083087	0.095777	0.012690
+metric=top1 text sim/top2 vision sim; rows=bottom_n:2000; agg=mean; selected separately per model/modality	0.233734	0.461764	0.228030	0.193657	0.205514	0.011857
+metric=top2 text sim/top2 vision sim; rows=bottom_n:2000; agg=mean; selected separately per model/modality	0.209883	0.421553	0.211669	0.193657	0.205514	0.011857
+metric=top3 text sim/top2 vision sim; rows=bottom_n:2000; agg=mean; selected separately per model/modality	0.201263	0.397437	0.196174	0.193657	0.205514	0.011857
+metric=text mean/vision mean; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.131214	0.219293	0.088079	0.127976	0.139013	0.011037
+metric=top3 text sim/top1 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.034517	0.122278	0.087761	0.075513	0.086277	0.010764
+metric=top2 text sim/top1 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.041725	0.105977	0.064253	0.075513	0.086277	0.010764
+metric=top1 text sim/top1 vision sim; rows=bottom_n:50; agg=mean; selected separately per model/modality	0.062784	0.116055	0.053271	0.075513	0.086277	0.010764
+metric=top1 text sim/top1 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.146365	0.281077	0.134712	0.134713	0.144781	0.010068
+metric=top2 text sim/top1 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.123173	0.251522	0.128350	0.134713	0.144781	0.010068
+metric=top3 text sim/top1 vision sim; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.122955	0.241444	0.118490	0.134713	0.144781	0.010068
+metric=text mean/vision mean; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.153198	0.254381	0.101183	0.145003	0.154608	0.009604
+metric=top1 text sim/top1 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.163651	0.321092	0.157441	0.149123	0.157937	0.008814
+metric=top2 text sim/top1 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.141003	0.285215	0.144212	0.149123	0.157937	0.008814
+metric=top3 text sim/top1 vision sim; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.139338	0.271705	0.132367	0.149123	0.157937	0.008814
+metric=top3 text sim/top1 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.083752	0.183044	0.099292	0.106742	0.115242	0.008500
+metric=top2 text sim/top1 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.082174	0.180998	0.098824	0.106742	0.115242	0.008500
+metric=top1 text sim/top1 vision sim; rows=bottom_n:200; agg=mean; selected separately per model/modality	0.108334	0.198398	0.090064	0.106742	0.115242	0.008500
+metric=top3 text sim/top1 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.058169	0.150593	0.092424	0.090297	0.098367	0.008070
+metric=top2 text sim/top1 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.058730	0.138275	0.079545	0.090297	0.098367	0.008070
+metric=top1 text sim/top1 vision sim; rows=bottom_n:100; agg=mean; selected separately per model/modality	0.083145	0.153408	0.070263	0.090297	0.098367	0.008070
+metric=top1 text sim/top1 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.183349	0.365673	0.182324	0.167989	0.173906	0.005917
+metric=top2 text sim/top1 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.160941	0.325761	0.164820	0.167989	0.173906	0.005917
+metric=top3 text sim/top1 vision sim; rows=bottom_n:1000; agg=mean; selected separately per model/modality	0.157784	0.308162	0.150378	0.167989	0.173906	0.005917
+metric=text mean/vision mean; rows=bottom_n:500; agg=mean; selected separately per model/modality	0.187401	0.315462	0.128062	0.176781	0.180207	0.003426
+metric=text mean/vision mean; rows=same-items: AnchorRec vision mean top N:50; agg=mean	0.712821	0.906572	0.193751	0.900497	0.903488	0.002991
+metric=top1 text sim/top1 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.205716	0.412791	0.207075	0.191309	0.192815	0.001506
+metric=top2 text sim/top1 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.183160	0.371002	0.187841	0.191309	0.192815	0.001506
+metric=top3 text sim/top1 vision sim; rows=q0.0-q0.2; agg=mean; selected separately per model/modality	0.177662	0.349718	0.172056	0.191309	0.192815	0.001506
+metric=text mean/vision mean; rows=q0.0-q0.1; agg=mean; selected separately per model/modality	0.202260	0.345212	0.142952	0.191964	0.192481	0.000516

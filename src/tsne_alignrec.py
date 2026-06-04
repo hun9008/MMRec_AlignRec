@@ -50,7 +50,7 @@ def visualize_alignment(content_embeds_items, id_embeds, sample_size=500, lines_
     for i in top_k_indices:
         plt.plot([content_2d[i, 0], id_2d[i, 0]], [content_2d[i, 1], id_2d[i, 1]], 'k--', linewidth=1.5)
 
-    plt.legend()
+    plt.legend(prop={'weight': 'bold'})
     plt.tight_layout()
     plt.savefig("tsne_top10_closest_pairs_mmtv.png", dpi=300)
     plt.close()
@@ -113,9 +113,9 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default='ALIGNREC_INPUT_CL_ANCHOR_MMTV_0513')
+    parser.add_argument('--model', type=str, default='ALIGNREC')
     parser.add_argument('--dataset', type=str, default='baby')
-    parser.add_argument('--checkpoint_path', type=str, required=True)
+    parser.add_argument('--checkpoint_path', type=str, default='saved/ALIGNREC_best.pth')
     parser.add_argument('--multimodal_data_dir', type=str, default='data/beit3_128token_add_title_brand_to_text/')
     args = parser.parse_args()
 

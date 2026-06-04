@@ -23,9 +23,9 @@ from common.loss import BPRLoss, EmbLoss, L2Loss
 from utils.utils import build_sim, compute_normalized_laplacian, build_knn_neighbourhood
 
 
-class LATTICE(GeneralRecommender):
+class LATTICE_STORE(GeneralRecommender):
     def __init__(self, config, dataset):
-        super(LATTICE, self).__init__(config, dataset)
+        super(LATTICE_STORE, self).__init__(config, dataset)
 
         self.embedding_dim = config['embedding_size']
         self.feat_embed_dim = config['feat_embed_dim']
@@ -36,6 +36,7 @@ class LATTICE(GeneralRecommender):
         self.n_layers = config['n_layers']
         self.reg_weight = config['reg_weight']
         self.build_item_graph = True
+        self.dataset_name = config['dataset']
 
         # load dataset info
         self.interaction_matrix = dataset.inter_matrix(form='coo').astype(np.float32)
@@ -161,6 +162,7 @@ class LATTICE(GeneralRecommender):
         h = self.item_id_embedding.weight
         for i in range(self.n_layers):
             h = torch.mm(self.item_adj, h)
+        mm_item = F.normalize(h, p=2, dim=1)
 
         if self.cf_model == 'ngcf':
             ego_embeddings = torch.cat((self.user_embedding.weight, self.item_id_embedding.weight), dim=0)
@@ -179,8 +181,8 @@ class LATTICE(GeneralRecommender):
             all_embeddings = torch.stack(all_embeddings, dim=1)
             all_embeddings = all_embeddings.mean(dim=1, keepdim=False)
             u_g_embeddings, i_g_embeddings = torch.split(all_embeddings, [self.n_users, self.n_items], dim=0)
-            i_g_embeddings = i_g_embeddings + F.normalize(h, p=2, dim=1)
-            return u_g_embeddings, i_g_embeddings
+            final_item = i_g_embeddings + mm_item
+            return u_g_embeddings, final_item, i_g_embeddings, mm_item
         elif self.cf_model == 'lightgcn':
             ego_embeddings = torch.cat((self.user_embedding.weight, self.item_id_embedding.weight), dim=0)
             all_embeddings = [ego_embeddings]
@@ -191,10 +193,11 @@ class LATTICE(GeneralRecommender):
             all_embeddings = torch.stack(all_embeddings, dim=1)
             all_embeddings = all_embeddings.mean(dim=1, keepdim=False)
             u_g_embeddings, i_g_embeddings = torch.split(all_embeddings, [self.n_users, self.n_items], dim=0)
-            i_g_embeddings = i_g_embeddings + F.normalize(h, p=2, dim=1)
-            return u_g_embeddings, i_g_embeddings
+            final_item = i_g_embeddings + mm_item
+            return u_g_embeddings, final_item, i_g_embeddings, mm_item
         elif self.cf_model == 'mf':
-            return self.user_embedding.weight, self.item_id_embedding.weight + F.normalize(h, p=2, dim=1)
+            final_item = self.item_id_embedding.weight + mm_item
+            return self.user_embedding.weight, final_item, self.item_id_embedding.weight, mm_item
 
     def bpr_loss(self, users, pos_items, neg_items):
         pos_scores = torch.sum(torch.mul(users, pos_items), dim=1)
@@ -215,7 +218,7 @@ class LATTICE(GeneralRecommender):
         pos_items = interaction[1]
         neg_items = interaction[2]
 
-        ua_embeddings, ia_embeddings = self.forward(self.norm_adj, build_item_graph=self.build_item_graph)
+        ua_embeddings, ia_embeddings, _, _ = self.forward(self.norm_adj, build_item_graph=self.build_item_graph)
         self.build_item_graph = False
 
         u_g_embeddings = ua_embeddings[users]
@@ -229,10 +232,15 @@ class LATTICE(GeneralRecommender):
     def full_sort_predict(self, interaction):
         user = interaction[0]
 
-        restore_user_e, restore_item_e = self.forward(self.norm_adj, build_item_graph=True)
+        restore_user_e, restore_item_e, id_item, mm_item = self.forward(self.norm_adj, build_item_graph=True)
         u_embeddings = restore_user_e[user]
+
+        save_dir = os.path.join("saved_emb", self.dataset_name, "Lattice")
+        os.makedirs(save_dir, exist_ok=True)
+        np.save(os.path.join(save_dir, "final_item.npy"), restore_item_e.detach().cpu().numpy())
+        np.save(os.path.join(save_dir, "mm_item.npy"), mm_item.detach().cpu().numpy())
+        np.save(os.path.join(save_dir, "id_item.npy"), id_item.detach().cpu().numpy())
 
         # dot with all item embedding to accelerate
         scores = torch.matmul(u_embeddings, restore_item_e.transpose(0, 1))
         return scores
-

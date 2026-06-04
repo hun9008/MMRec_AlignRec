@@ -73,3 +73,7 @@ year = {2023}
 ```
 
 /Users/jeong-yonghun/miniconda3/envs/alignrec_env/bin/
+
+python tools/upload_logs_to_wandb.py \
+  --log-dir log \
+  --pattern 'BM3-baby-Nov-07-2025-22-38-26.log'

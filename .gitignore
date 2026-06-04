@@ -166,3 +166,10 @@ log_after
 images_after
 log
 hyper
+.codex
+
+figure_5_images/*
+figure_5_plots/*
+
+MSCA
+wandb

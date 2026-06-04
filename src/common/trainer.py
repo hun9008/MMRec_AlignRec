@@ -281,7 +281,11 @@ class Trainer(AbstractTrainer):
                     self.best_test_upon_valid = test_result
 
                     if saved:  # <-- 저장 플래그가 True일 때만
-                        save_path = os.path.join(self.config['checkpoint_dir'], f'{self.config["model"]}_best.pth')
+                        os.makedirs(self.config['checkpoint_dir'], exist_ok=True)
+                        save_path = os.path.join(
+                            self.config['checkpoint_dir'],
+                            f'{self.config["model"]}_{self.config["dataset"]}_best.pth'
+                        )
                         torch.save(self.model.state_dict(), save_path)
                         if verbose:
                             self.logger.info(f"Saved best model to {save_path}")                  
@@ -335,4 +339,3 @@ class Trainer(AbstractTrainer):
             plt.show()
         if save_path:
             plt.savefig(save_path)
-

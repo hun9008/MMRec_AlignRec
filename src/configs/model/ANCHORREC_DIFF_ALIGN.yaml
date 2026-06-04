@@ -1,0 +1,41 @@
+embedding_size: 64
+n_ui_layers: 2
+n_layers: [3]
+# n_layers: [1, 2, 3]
+
+learning_rate_scheduler: [0.96, 50]
+lambda_coeff: 0.9
+lambda_weight: [0.01]
+# lambda_weight: [0.001, 0.01, 0.1]
+
+knn_k: [10]
+
+# learning_rate: [0.005,0.003,0.001,0.0007,0.0005,0.0003,0.0001]
+# learning_rate: [0.001,0.0001]
+# cl_loss: [0.0001,0.001,0.01, 0.1]
+# cl_loss: [0, 1]
+learning_rate: [0.001]
+aal_loss: [0.001]
+# cl_loss: [0.0001, 0.1]
+
+# sim_weight: [0.1,0.2,0.3,0.4,0.5]
+# sim_weight: [0.1,0.3,0.5]
+# sim_weight: [0.3]
+# sim_weight: [0.0001,0.001,0.01,0.1]
+# sim_weight: [0, 1]
+# sim_weight: [0, 0.0001, 0.001, 0.01]
+amp_loss: [0.1]
+# sim_weight: [0.0001, 0.001, 0.01]
+
+ui_cosine_loss_weight: 0.01
+ui_cosine_loss: True
+# sim_weight: [0.0001,0.001,0.01,0.1,1.0]
+
+recover_lambda: 0.5 # 0.0005
+recon_weight: 0.001
+
+# tau_weight: [0 ,0.05, 0.5, 1]
+tau_weight: [0.05]
+# tau_weight: [0, 0.05, 0.1, 0.25, 0.5, 1]
+
+hyper_parameters: ["lambda_weight","aal_loss","learning_rate","n_layers","knn_k","amp_loss", "tau_weight"]

@@ -19,7 +19,7 @@ python src/main.py \
   --dataset "${DATASET}" \
   --log_file_name "${MODEL}" \
   --ui_cosine_loss \
-  --multimodal_data_dir "../data/data/${DATASET}_gemma4/" \
+  --multimodal_data_dir "../data/data/${DATASET}_beit3_128token_add_title_brand_to_text/" \
   "${EXTRA_ARGS[@]}"
 
 # --multimodal_data_dir "data/${DATASET}_beit3_128token_add_title_brand_to_text/" \

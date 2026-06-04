@@ -3,7 +3,7 @@ gpu_id: 6
 use_gpu: True
 # seed: [999]
 # seed: [333]
-seed: [999, 777, 555, 333, 111]
+seed: [999]
 
 # multi-modal raw features
 data_path: '../data/data/'
@@ -21,7 +21,7 @@ req_training: True
 #embedding_size: 3780
 
 # training settings
-epochs: 100
+epochs: 50
 stopping_step: 10000 
 train_batch_size: 2048
 learner: adam
